@@ -1,5 +1,5 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Mail, Github, Linkedin } from 'lucide-react';
+import { Mail, Github, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Contact = () => {
@@ -9,20 +9,20 @@ const Contact = () => {
     {
       icon: Mail,
       label: t('contact.email'),
-      value: 'your.email@example.com',
-      href: 'mailto:your.email@example.com',
+      value: 'guilhermeledochagas@gmail.com',
+      href: 'mailto:guilhermeledochagas@gmail.com',
     },
     {
       icon: Github,
       label: t('contact.github'),
-      value: 'github.com/yourusername',
-      href: 'https://github.com/yourusername',
+      value: 'github.com/guilhermeledo',
+      href: 'https://github.com/guilhermeledo',
     },
     {
-      icon: Linkedin,
-      label: t('contact.linkedin'),
-      value: 'linkedin.com/in/yourprofile',
-      href: 'https://linkedin.com/in/yourprofile',
+      icon: MessageCircle,
+      label: 'WhatsApp',
+      value: '+55 11 98090-4699',
+      href: 'https://wa.me/5511980904699',
     },
   ];
 
