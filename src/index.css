@@ -18,7 +18,7 @@ All colors MUST be HSL.
     --popover-foreground: 222.2 84% 4.9%;
 
     --primary: 189 90% 55%;
-    --primary-foreground: 210 40% 98%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -38,9 +38,9 @@ All colors MUST be HSL.
 
     --radius: 0.75rem;
     
-    --gradient-start: 210 40% 98%;
-    --gradient-mid: 210 40% 96%;
-    --gradient-end: 214 32% 91%;
+    --gradient-start: 0 0% 100%;
+    --gradient-mid: 210 40% 98%;
+    --gradient-end: 189 90% 96%;
   }
 
   .dark {
