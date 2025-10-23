@@ -38,7 +38,7 @@ const Experience = () => {
     <section id="experience" className="min-h-screen flex items-center py-20 relative">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-          {language === 'en' ? 'Experience' : 'Experiência'}
+          {t('experience.title')}
         </h2>
         <div className="max-w-4xl mx-auto space-y-8">
           {experiences.map((exp, index) => (

@@ -30,11 +30,12 @@ const Navigation = () => {
                 {t('nav.about')}
               </button>
               <button
-                onClick={() => scrollToSection('skills')}
+                onClick={() => scrollToSection('technologies')}
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
-                {t('nav.skills')}
+                {t('nav.technologies')}
               </button>
+
               <button
                 onClick={() => scrollToSection('experience')}
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
@@ -48,10 +49,16 @@ const Navigation = () => {
                 {t('nav.projects')}
               </button>
               <button
+                onClick={() => scrollToSection('education')}
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {t('education.title')}
+              </button>
+              <button
                 onClick={() => scrollToSection('certifications')}
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
-                {t('nav.certifications')}
+                {t('certifications.title')}
               </button>
               <button
                 onClick={() => scrollToSection('contact')}

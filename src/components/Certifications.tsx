@@ -47,7 +47,7 @@ const Certifications = () => {
     <section id="certifications" className="min-h-screen flex items-center py-20 relative">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-          {language === 'en' ? 'Certifications & Courses' : 'Certificações e Cursos'}
+          {t('certifications.title')}
         </h2>
         <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
           {certifications.map((cert, index) => (

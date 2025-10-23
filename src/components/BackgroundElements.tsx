@@ -27,12 +27,12 @@ const BackgroundElements = () => {
       
       {/* More floating elements */}
       <div className="absolute top-1/3 left-16 text-primary/15 text-sm animate-pulse delay-4000">
-        {'React'}
+        {'React.js'}
       </div>
       <div className="absolute top-1/2 right-16 text-primary/15 text-sm animate-pulse delay-5000">
         {'TypeScript'}
       </div>
-      <div className="absolute top-2/3 left-1/3 text-primary/15 text-sm animate-pulse delay-6000">
+      <div className="absolute top-2/3 left-1/4 text-primary/15 text-sm animate-pulse delay-6000 [writing-mode:vertical-rl]">
         {'Node.js'}
       </div>
       
@@ -41,9 +41,8 @@ const BackgroundElements = () => {
       <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-primary/35 rounded-full animate-ping delay-8000"></div>
       <div className="absolute top-1/2 left-1/5 w-1.5 h-1.5 bg-primary/30 rounded-full animate-ping delay-9000"></div>
       
-      {/* Subtle lines */}
+      {/* Subtle line */}
       <div className="absolute top-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/15 to-transparent"></div>
-      <div className="absolute top-2/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/15 to-transparent"></div>
     </div>
   );
 };

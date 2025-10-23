@@ -26,7 +26,7 @@ const Hero = () => {
           <img
             src={officeMe}
             alt="Guilherme Ledo Chagas"
-            className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-lg"
+            className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-lg border-4 border-primary"
           />
         </div>
       </div>

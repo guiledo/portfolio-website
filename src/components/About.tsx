@@ -1,14 +1,28 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Code2, Database, Layout, ArrowDown } from 'lucide-react';
+import { Code2, Database, Terminal, ArrowDown, Target, MapPin, Calendar } from 'lucide-react';
 
 const About = () => {
   const { t } = useLanguage();
 
-  const skills = [
-    { icon: Layout, label: 'Frontend Development', tech: 'React, JavaScript, HTML/CSS, Tailwind CSS' },
-    { icon: Database, label: 'Backend & Databases', tech: 'Node.js, Python, SQL, API Development' },
-    { icon: Code2, label: 'Tools & Technologies', tech: 'Git, VS Code, Linux, Problem Solving' },
+  const objectives = [
+    {
+      icon: Target,
+      title: t('careerObjectives.goals.title'),
+      content: t('careerObjectives.goals.content'),
+    },
+    {
+      icon: MapPin,
+      title: t('careerObjectives.location.title'),
+      content: t('careerObjectives.location.content'),
+    },
+    {
+      icon: Calendar,
+      title: t('careerObjectives.availability.title'),
+      content: t('careerObjectives.availability.content'),
+    },
   ];
+
+
 
   return (
     <section id="about" className="min-h-screen flex items-center py-20 relative">
@@ -20,18 +34,27 @@ const About = () => {
           <p className="text-lg text-muted-foreground mb-12 leading-relaxed">
             {t('about.description')}
           </p>
-          <div className="grid md:grid-cols-3 gap-6">
-            {skills.map((skill) => (
+          <div className="max-w-4xl mx-auto space-y-8 mt-12"> {/* Added mt-12 for spacing */}
+            {objectives.map((objective, index) => (
               <div
-                key={skill.label}
+                key={index}
                 className="bg-card border border-border rounded-2xl p-6 hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
               >
-                <skill.icon className="h-8 w-8 text-primary mb-4" />
-                <h3 className="font-semibold mb-2">{skill.label}</h3>
-                <p className="text-sm text-muted-foreground">{skill.tech}</p>
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
+                      <objective.icon className="h-6 w-6 text-primary" />
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-semibold mb-3">{objective.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{objective.content}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
+
         </div>
       </div>
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
