@@ -9,8 +9,8 @@ const Contact = () => {
     {
       icon: Mail,
       label: t('contact.email'),
-      value: 'guilhermeledochagas@gmail.com',
-      href: 'mailto:guilhermeledochagas@gmail.com',
+      value: 'glc.professional42@gmail.com',
+      href: 'mailto:glc.professional42@gmail.com',
     },
     {
       icon: Github,
