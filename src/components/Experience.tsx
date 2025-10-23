@@ -6,24 +6,6 @@ const Experience = () => {
 
   const experiences = [
     {
-      title: language === 'en' ? 'Freelance Web Developer' : 'Desenvolvedor Web Freelancer',
-      company: language === 'en' ? 'Self-Employed' : 'Autônomo',
-      period: '2023 - Present',
-      description: language === 'en'
-        ? 'Developing small business websites and web applications using modern technologies. Working with clients to understand requirements and deliver custom solutions.'
-        : 'Desenvolvendo sites para pequenas empresas e aplicações web usando tecnologias modernas. Trabalhando com clientes para entender requisitos e entregar soluções personalizadas.',
-      skills: ['React', 'JavaScript', 'HTML/CSS', 'Client Communication'],
-    },
-    {
-      title: language === 'en' ? 'Computer Science Teaching Assistant' : 'Monitor de Ciência da Computação',
-      company: language === 'en' ? 'University of São Paulo' : 'Universidade de São Paulo',
-      period: '2023 - Present',
-      description: language === 'en'
-        ? 'Assisting professors in Data Structures and Algorithms courses. Helping students understand complex programming concepts and debugging their code.'
-        : 'Auxiliando professores em cursos de Estruturas de Dados e Algoritmos. Ajudando estudantes a entender conceitos complexos de programação e debugar seus códigos.',
-      skills: ['Python', 'C++', 'Data Structures', 'Teaching'],
-    },
-    {
       title: language === 'en' ? 'Open Source Contributor' : 'Contribuidor Open Source',
       company: language === 'en' ? 'Various Projects' : 'Vários Projetos',
       period: '2022 - Present',
@@ -73,6 +55,7 @@ const Experience = () => {
           ))}
         </div>
       </div>
+
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
         <ArrowDown className="h-6 w-6 text-primary" />
       </div>

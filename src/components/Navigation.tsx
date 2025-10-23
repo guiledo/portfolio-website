@@ -1,10 +1,13 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { Languages } from 'lucide-react';
+import { Languages, Menu } from 'lucide-react';
 import logo from '@/assets/logo.png';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const Navigation = () => {
   const { language, toggleLanguage, t } = useLanguage();
+  const isMobile = useIsMobile();
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -22,51 +25,115 @@ const Navigation = () => {
             >
               <img src={logo} alt="GLC Logo" className="h-16" />
             </button>
-            <div className="hidden lg:flex items-center gap-4">
-              <button
-                onClick={() => scrollToSection('about')}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {t('nav.about')}
-              </button>
-              <button
-                onClick={() => scrollToSection('technologies')}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {t('nav.technologies')}
-              </button>
+            {isMobile ? (
+              <Sheet>
+                <SheetTrigger asChild>
+                  <Button variant="outline" size="icon">
+                    <Menu className="h-6 w-6" />
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="left">
+                  <nav className="flex flex-col gap-4 mt-8">
+                    <button
+                      onClick={() => {
+                        scrollToSection('about');
+                        // Close sheet after clicking
+                        document.getElementById('sheet-close-button')?.click();
+                      }}
+                      className="text-lg text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      {t('nav.about')}
+                    </button>
+                    <button
+                      onClick={() => {
+                        scrollToSection('technologies');
+                        document.getElementById('sheet-close-button')?.click();
+                      }}
+                      className="text-lg text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      {t('nav.technologies')}
+                    </button>
+                    <button
+                      onClick={() => {
+                        scrollToSection('experience');
+                        document.getElementById('sheet-close-button')?.click();
+                      }}
+                      className="text-lg text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      {t('nav.experience')}
+                    </button>
+                    <button
+                      onClick={() => {
+                        scrollToSection('projects');
+                        document.getElementById('sheet-close-button')?.click();
+                      }}
+                      className="text-lg text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      {t('nav.projects')}
+                    </button>
+                    <button
+                      onClick={() => {
+                        scrollToSection('education');
+                        document.getElementById('sheet-close-button')?.click();
+                      }}
+                      className="text-lg text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      {t('education.title')}
+                    </button>
+                    <button
+                      onClick={() => {
+                        scrollToSection('contact');
+                        document.getElementById('sheet-close-button')?.click();
+                      }}
+                      className="text-lg text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      {t('nav.contact')}
+                    </button>
+                  </nav>
+                </SheetContent>
+              </Sheet>
+            ) : (
+              <div className="flex items-center gap-4">
+                <button
+                  onClick={() => scrollToSection('about')}
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {t('nav.about')}
+                </button>
+                <button
+                  onClick={() => scrollToSection('technologies')}
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {t('nav.technologies')}
+                </button>
 
-              <button
-                onClick={() => scrollToSection('experience')}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {t('nav.experience')}
-              </button>
-              <button
-                onClick={() => scrollToSection('projects')}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {t('nav.projects')}
-              </button>
-              <button
-                onClick={() => scrollToSection('education')}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {t('education.title')}
-              </button>
-              <button
-                onClick={() => scrollToSection('certifications')}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {t('certifications.title')}
-              </button>
-              <button
-                onClick={() => scrollToSection('contact')}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {t('nav.contact')}
-              </button>
-            </div>
+                <button
+                  onClick={() => scrollToSection('experience')}
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {t('nav.experience')}
+                </button>
+                <button
+                  onClick={() => scrollToSection('projects')}
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {t('nav.projects')}
+                </button>
+                <button
+                  onClick={() => scrollToSection('education')}
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {t('education.title')}
+                </button>
+
+                <button
+                  onClick={() => scrollToSection('contact')}
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {t('nav.contact')}
+                </button>
+              </div>
+            )}
           </div>
           <div className="flex items-center gap-2">
             <Button

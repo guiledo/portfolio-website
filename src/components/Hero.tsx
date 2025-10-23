@@ -12,9 +12,8 @@ const Hero = () => {
           <p className="text-primary font-medium mb-4 animate-in fade-in slide-in-from-bottom-4 duration-700">
             {t('hero.greeting')}
           </p>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100 whitespace-nowrap">
-            Guilherme Ledo Chagas
-          </h1>
+                      <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100">
+                      Guilherme Ledo Chagas          </h1>
           <h2 className="text-2xl md:text-3xl text-muted-foreground mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
             {t('hero.title')}
           </h2>
@@ -26,10 +25,11 @@ const Hero = () => {
           <img
             src={officeMe}
             alt="Guilherme Ledo Chagas"
-            className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-lg border-4 border-primary"
+            className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full object-cover shadow-lg border-4 border-primary"
           />
         </div>
       </div>
+
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
         <ArrowDown className="h-6 w-6 text-primary" />
       </div>
