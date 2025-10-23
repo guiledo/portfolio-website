@@ -1,6 +1,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Languages } from 'lucide-react';
+import logo from '@/assets/logo.png';
 
 const Navigation = () => {
   const { language, toggleLanguage, t } = useLanguage();
@@ -17,9 +18,9 @@ const Navigation = () => {
           <div className="flex items-center gap-8">
             <button
               onClick={() => scrollToSection('hero')}
-              className="text-xl font-bold text-primary hover:opacity-80 transition-opacity"
+              className="hover:opacity-80 transition-opacity"
             >
-              {'<dev />'}
+              <img src={logo} alt="GLC Logo" className="h-8" />
             </button>
             <div className="hidden md:flex items-center gap-6">
               <button
