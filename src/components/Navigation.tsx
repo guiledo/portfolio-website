@@ -20,7 +20,7 @@ const Navigation = () => {
               onClick={() => scrollToSection('hero')}
               className="hover:opacity-80 transition-opacity"
             >
-              <img src={logo} alt="GLC Logo" className="h-8" />
+              <img src={logo} alt="GLC Logo" className="h-12" />
             </button>
             <div className="hidden md:flex items-center gap-6">
               <button
