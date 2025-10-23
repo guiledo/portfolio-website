@@ -7,28 +7,28 @@ const Contact = () => {
 
   const contacts = [
     {
-      icon: Linkedin,
-      label: t('contact.linkedin'),
-      value: 'linkedin.com/in/glc42',
-      href: 'https://www.linkedin.com/in/glc42/',
-    },
-    {
       icon: Mail,
       label: t('contact.email'),
       value: 'glc.professional42@gmail.com',
       href: 'mailto:glc.professional42@gmail.com',
     },
     {
-      icon: Github,
-      label: t('contact.github'),
-      value: 'github.com/GuiLedo',
-      href: 'https://github.com/GuiLedo',
-    },
-    {
       icon: MessageCircle,
       label: 'WhatsApp',
       value: '+55 11 98090-4699',
       href: 'https://wa.me/5511980904699',
+    },
+    {
+      icon: Linkedin,
+      label: t('contact.linkedin'),
+      value: 'linkedin.com/in/glc42',
+      href: 'https://www.linkedin.com/in/glc42/',
+    },
+    {
+      icon: Github,
+      label: t('contact.github'),
+      value: 'github.com/GuiLedo',
+      href: 'https://github.com/GuiLedo',
     },
   ];
 
