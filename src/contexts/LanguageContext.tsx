@@ -10,7 +10,7 @@ interface LanguageContextType {
 
 const translations = {
   en: {
-    'nav.about': 'About Me',
+    'nav.about': 'About',
     'nav.education': 'Education',
     'nav.projects': 'Projects',
     'nav.contact': 'Contact',
@@ -28,7 +28,7 @@ const translations = {
     'contact.linkedin': 'LinkedIn',
   },
   pt: {
-    'nav.about': 'Sobre Mim',
+    'nav.about': 'Sobre',
     'nav.education': 'Educação',
     'nav.projects': 'Projetos',
     'nav.contact': 'Contato',
