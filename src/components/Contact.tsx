@@ -15,8 +15,8 @@ const Contact = () => {
     {
       icon: Github,
       label: t('contact.github'),
-      value: 'github.com/guilhermeledo',
-      href: 'https://github.com/guilhermeledo',
+      value: 'github.com/GuiLedo',
+      href: 'https://github.com/GuiLedo',
     },
     {
       icon: MessageCircle,
