@@ -1,10 +1,12 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { Languages } from 'lucide-react';
+import { Languages, Moon, Sun } from 'lucide-react';
 import logo from '@/assets/logo.png';
+import { useTheme } from 'next-themes';
 
 const Navigation = () => {
   const { language, toggleLanguage, t } = useLanguage();
+  const { theme, setTheme } = useTheme();
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -49,15 +51,24 @@ const Navigation = () => {
               </button>
             </div>
           </div>
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={toggleLanguage}
-            className="gap-2"
-          >
-            <Languages className="h-4 w-4" />
-            {language.toUpperCase()}
-          </Button>
+          <div className="flex items-center gap-2">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            >
+              {theme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+            </Button>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={toggleLanguage}
+              className="gap-2"
+            >
+              <Languages className="h-4 w-4" />
+              {language.toUpperCase()}
+            </Button>
+          </div>
         </div>
       </div>
     </nav>
