@@ -11,7 +11,7 @@ const Hero = () => {
           <p className="text-primary font-medium mb-4 animate-in fade-in slide-in-from-bottom-4 duration-700">
             {t('hero.greeting')}
           </p>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100 whitespace-nowrap">
             Guilherme Ledo Chagas
           </h1>
           <h2 className="text-2xl md:text-3xl text-muted-foreground mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
