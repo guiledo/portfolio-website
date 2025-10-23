@@ -1,17 +1,17 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Code2, Database, Layout } from 'lucide-react';
+import { Code2, Database, Layout, ArrowDown } from 'lucide-react';
 
 const About = () => {
   const { t } = useLanguage();
 
   const skills = [
-    { icon: Layout, label: 'Frontend', tech: 'React, TypeScript, Tailwind' },
-    { icon: Database, label: 'Backend', tech: 'Node.js, PostgreSQL, API Design' },
-    { icon: Code2, label: 'Tools', tech: 'Git, Docker, VS Code' },
+    { icon: Layout, label: 'Frontend Development', tech: 'React, JavaScript, HTML/CSS, Tailwind CSS' },
+    { icon: Database, label: 'Backend & Databases', tech: 'Node.js, Python, SQL, API Development' },
+    { icon: Code2, label: 'Tools & Technologies', tech: 'Git, VS Code, Linux, Problem Solving' },
   ];
 
   return (
-    <section id="about" className="min-h-screen flex items-center py-20">
+    <section id="about" className="min-h-screen flex items-center py-20 relative">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
           {t('about.title')}
@@ -24,7 +24,7 @@ const About = () => {
             {skills.map((skill) => (
               <div
                 key={skill.label}
-                className="bg-card border border-border rounded-lg p-6 hover:border-primary transition-colors"
+                className="bg-card border border-border rounded-2xl p-6 hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
               >
                 <skill.icon className="h-8 w-8 text-primary mb-4" />
                 <h3 className="font-semibold mb-2">{skill.label}</h3>
@@ -33,6 +33,9 @@ const About = () => {
             ))}
           </div>
         </div>
+      </div>
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+        <ArrowDown className="h-6 w-6 text-primary" />
       </div>
     </section>
   );

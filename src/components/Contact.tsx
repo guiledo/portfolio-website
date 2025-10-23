@@ -1,11 +1,17 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Mail, Github, MessageCircle } from 'lucide-react';
+import { Mail, Github, MessageCircle, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Contact = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const contacts = [
+    {
+      icon: Linkedin,
+      label: t('contact.linkedin'),
+      value: 'linkedin.com/in/glc42',
+      href: 'https://www.linkedin.com/in/glc42/',
+    },
     {
       icon: Mail,
       label: t('contact.email'),
@@ -27,7 +33,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="min-h-screen flex items-center py-20 bg-card/30">
+    <section id="contact" className="min-h-screen flex items-center py-20">
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -36,22 +42,20 @@ const Contact = () => {
           <p className="text-muted-foreground mb-12 text-lg">
             {t('contact.description')}
           </p>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
             {contacts.map((contact) => (
-              <Button
+              <div
                 key={contact.label}
-                variant="outline"
-                className="h-auto flex-col gap-3 p-6 hover:border-primary"
-                asChild
+                className="bg-card border border-border rounded-2xl p-6 hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
               >
-                <a href={contact.href} target="_blank" rel="noopener noreferrer">
+                <a href={contact.href} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-3 text-center">
                   <contact.icon className="h-8 w-8 text-primary" />
                   <div>
                     <p className="font-semibold mb-1">{contact.label}</p>
                     <p className="text-xs text-muted-foreground">{contact.value}</p>
                   </div>
                 </a>
-              </Button>
+              </div>
             ))}
           </div>
         </div>

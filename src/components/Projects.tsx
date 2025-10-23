@@ -1,5 +1,5 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, ArrowDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Projects = () => {
@@ -7,36 +7,69 @@ const Projects = () => {
 
   const projects = [
     {
-      title: language === 'en' ? 'E-commerce Platform' : 'Plataforma de E-commerce',
+      title: language === 'en' ? 'Personal Portfolio Website' : 'Website de Portfolio Pessoal',
       description: language === 'en'
-        ? 'Full-stack e-commerce solution with React, Node.js, and PostgreSQL'
-        : 'Solução de e-commerce full-stack com React, Node.js e PostgreSQL',
-      tech: ['React', 'Node.js', 'PostgreSQL', 'Tailwind CSS'],
-      github: '#',
+        ? 'Responsive portfolio website built with React, TypeScript, and Tailwind CSS. Features smooth animations, multilingual support, and modern UI design.'
+        : 'Website de portfolio responsivo construído com React, TypeScript e Tailwind CSS. Inclui animações suaves, suporte multilíngue e design moderno.',
+      tech: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
+      github: 'https://github.com/GuiLedo/portfolio-website',
       demo: '#',
+      impact: language === 'en' ? 'Showcases technical skills and professional presentation' : 'Demonstra habilidades técnicas e apresentação profissional',
     },
     {
-      title: language === 'en' ? 'Task Management App' : 'App de Gerenciamento de Tarefas',
+      title: language === 'en' ? 'Student Grade Management System' : 'Sistema de Gerenciamento de Notas Estudantis',
       description: language === 'en'
-        ? 'Collaborative task management tool with real-time updates'
-        : 'Ferramenta colaborativa de gerenciamento de tarefas com atualizações em tempo real',
-      tech: ['TypeScript', 'React', 'Firebase', 'Material-UI'],
+        ? 'Python application for tracking student grades with GUI interface. Implements data persistence and grade calculations with user-friendly design.'
+        : 'Aplicação Python para rastrear notas de estudantes com interface gráfica. Implementa persistência de dados e cálculos de notas com design amigável.',
+      tech: ['Python', 'Tkinter', 'File I/O', 'OOP'],
       github: '#',
       demo: '#',
+      impact: language === 'en' ? 'Solves real academic problem with practical application' : 'Resolve problema acadêmico real com aplicação prática',
     },
     {
       title: language === 'en' ? 'Weather Dashboard' : 'Dashboard de Clima',
       description: language === 'en'
-        ? 'Weather application with location search and forecasts'
-        : 'Aplicação de clima com busca de localização e previsões',
-      tech: ['React', 'API Integration', 'Charts', 'CSS'],
+        ? 'React-based weather application with API integration. Features location search, current weather display, and responsive design for multiple devices.'
+        : 'Aplicação de clima baseada em React com integração de API. Inclui busca por localização, exibição do clima atual e design responsivo.',
+      tech: ['React', 'API Integration', 'CSS', 'Responsive Design'],
       github: '#',
       demo: '#',
+      impact: language === 'en' ? 'Demonstrates API integration and user experience focus' : 'Demonstra integração de API e foco na experiência do usuário',
+    },
+    {
+      title: language === 'en' ? 'Task Management App' : 'App de Gerenciamento de Tarefas',
+      description: language === 'en'
+        ? 'Interactive task management application with local storage. Features task creation, completion tracking, and modern UI with smooth animations.'
+        : 'Aplicação interativa de gerenciamento de tarefas com armazenamento local. Inclui criação de tarefas, acompanhamento de conclusão e UI moderna.',
+      tech: ['JavaScript', 'HTML/CSS', 'Local Storage', 'DOM Manipulation'],
+      github: '#',
+      demo: '#',
+      impact: language === 'en' ? 'Improves productivity with intuitive user interface' : 'Melhora produtividade com interface intuitiva',
+    },
+    {
+      title: language === 'en' ? 'Library Management System' : 'Sistema de Gerenciamento de Biblioteca',
+      description: language === 'en'
+        ? 'Console-based library system managing books and members. Implements CRUD operations, data validation, and file-based data persistence.'
+        : 'Sistema de biblioteca baseado em console para gerenciar livros e membros. Implementa operações CRUD, validação de dados e persistência em arquivos.',
+      tech: ['Python', 'OOP', 'File Management', 'Data Structures'],
+      github: '#',
+      demo: '#',
+      impact: language === 'en' ? 'Demonstrates system design and data management skills' : 'Demonstra habilidades de design de sistema e gerenciamento de dados',
+    },
+    {
+      title: language === 'en' ? 'Interactive Calculator' : 'Calculadora Interativa',
+      description: language === 'en'
+        ? 'Web-based calculator with modern UI and keyboard support. Features basic operations, error handling, and responsive design for all devices.'
+        : 'Calculadora baseada na web com UI moderna e suporte a teclado. Inclui operações básicas, tratamento de erros e design responsivo.',
+      tech: ['JavaScript', 'CSS', 'DOM Manipulation', 'Event Handling'],
+      github: '#',
+      demo: '#',
+      impact: language === 'en' ? 'Showcases clean code and user interaction design' : 'Demonstra código limpo e design de interação do usuário',
     },
   ];
 
   return (
-    <section id="projects" className="min-h-screen flex items-center py-20">
+    <section id="projects" className="min-h-screen flex items-center py-20 relative">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
           {t('projects.title')}
@@ -45,7 +78,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-card border border-border rounded-lg overflow-hidden hover:border-primary transition-all group"
+              className="bg-card border border-border rounded-2xl overflow-hidden hover:border-primary transition-all duration-300 group hover:shadow-lg hover:shadow-primary/10"
             >
               <div className="h-48 bg-secondary/50 flex items-center justify-center">
                 <div className="text-6xl opacity-20 group-hover:opacity-30 transition-opacity">
@@ -54,7 +87,13 @@ const Projects = () => {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-muted-foreground mb-4 text-sm">{project.description}</p>
+                <p className="text-muted-foreground mb-3 text-sm">{project.description}</p>
+                <div className="mb-3">
+                  <p className="text-xs font-medium text-primary mb-1">
+                    {language === 'en' ? 'Impact:' : 'Impacto:'}
+                  </p>
+                  <p className="text-xs text-muted-foreground">{project.impact}</p>
+                </div>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((tech) => (
                     <span
@@ -83,6 +122,9 @@ const Projects = () => {
             </div>
           ))}
         </div>
+      </div>
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+        <ArrowDown className="h-6 w-6 text-primary" />
       </div>
     </section>
   );
