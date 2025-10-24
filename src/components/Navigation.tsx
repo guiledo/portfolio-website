@@ -1,6 +1,6 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { Languages, Menu, Mail, MessageCircle, Linkedin, Github } from 'lucide-react';
+import { Languages, Menu, Linkedin, Github } from 'lucide-react';
 import logo from '@/assets/logo.png';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { useIsMobile } from '@/hooks/use-mobile';
@@ -156,28 +156,6 @@ const Navigation = () => {
               <a href="https://www.linkedin.com/in/glc42/" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="h-5 w-5" />
                 <span>LinkedIn</span>
-              </a>
-            </Button>
-            <Button
-              variant="outline"
-              size="default"
-              asChild
-              className="gap-2"
-            >
-              <a href="https://wa.me/5511980904699" target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="h-5 w-5" />
-                <span>WhatsApp</span>
-              </a>
-            </Button>
-            <Button
-              variant="outline"
-              size="default"
-              asChild
-              className="gap-2"
-            >
-              <a href="mailto:glc.professional42@gmail.com" target="_blank" rel="noopener noreferrer">
-                <Mail className="h-5 w-5" />
-                <span>E-mail</span>
               </a>
             </Button>
             <Button
