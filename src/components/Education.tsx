@@ -1,5 +1,5 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { GraduationCap, Award, ArrowDown } from 'lucide-react';
+import { GraduationCap, Award } from 'lucide-react';
 
 interface EducationItem {
   id: string;
@@ -43,9 +43,9 @@ const Education = () => {
   ];
 
   return (
-    <section id="education" className="min-h-screen flex items-center py-20 relative">
+    <section id="education" className="flex items-center py-20 relative mb-20">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
           {t('education.title')}
         </h2>
         <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
@@ -65,16 +65,16 @@ const Education = () => {
                   </div>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold mb-1">{item.title}</h3>
-                  <p className="text-primary mb-2">{item.issuer}</p>
-                  <p className="text-sm text-muted-foreground mb-3">{item.period}</p>
-                  <p className="text-muted-foreground">{item.description}</p>
+                  <h3 className="text-2xl font-semibold mb-1">{item.title}</h3>
+                  <p className="text-lg text-primary mb-2">{item.issuer}</p>
+                  <p className="text-base text-muted-foreground mb-3">{item.period}</p>
+                  <p className="text-lg text-muted-foreground">{item.description}</p>
                   {item.skills && (
                     <div className="flex flex-wrap gap-2 mt-4">
                       {item.skills.map((skill) => (
                         <span
                           key={skill}
-                          className="text-xs px-2 py-1 bg-primary/10 text-primary rounded-full"
+                          className="text-sm px-2 py-1 bg-primary/10 text-primary rounded-full"
                         >
                           {skill}
                         </span>
@@ -88,9 +88,6 @@ const Education = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <ArrowDown className="h-6 w-6 text-primary" />
-      </div>
     </section>
   );
 }

@@ -1,5 +1,5 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Code2, Database, Terminal, ArrowDown, Target, MapPin, Calendar } from 'lucide-react';
+import { Code2, Database, Terminal, Target, MapPin, Calendar } from 'lucide-react';
 
 const About = () => {
   const { t } = useLanguage();
@@ -25,13 +25,13 @@ const About = () => {
 
 
   return (
-    <section id="about" className="min-h-screen flex items-center py-20 relative">
+    <section id="about" className="flex items-center py-20 relative mb-20">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
           {t('about.title')}
         </h2>
         <div className="max-w-3xl mx-auto">
-          <p className="text-lg text-muted-foreground mb-12 leading-relaxed">
+          <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
             {t('about.description')}
           </p>
           <div className="max-w-4xl mx-auto space-y-8 mt-12"> {/* Added mt-12 for spacing */}
@@ -47,8 +47,8 @@ const About = () => {
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold mb-3">{objective.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{objective.content}</p>
+                    <h3 className="text-2xl font-semibold mb-3">{objective.title}</h3>
+                    <p className="text-lg text-muted-foreground leading-relaxed">{objective.content}</p>
                   </div>
                 </div>
               </div>
@@ -58,9 +58,6 @@ const About = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <ArrowDown className="h-6 w-6 text-primary" />
-      </div>
     </section>
   );
 };

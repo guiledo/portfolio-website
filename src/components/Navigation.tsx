@@ -23,7 +23,7 @@ const Navigation = () => {
               onClick={() => scrollToSection('hero')}
               className="hover:opacity-80 transition-opacity"
             >
-              <img src={logo} alt="GLC Logo" className="h-16" />
+              <img src={logo} alt="GLC Logo" className="h-20" />
             </button>
             {isMobile ? (
               <Sheet>
@@ -40,7 +40,7 @@ const Navigation = () => {
                         // Close sheet after clicking
                         document.getElementById('sheet-close-button')?.click();
                       }}
-                      className="text-lg text-muted-foreground hover:text-foreground transition-colors"
+                      className="text-xl text-muted-foreground hover:text-foreground transition-colors"
                     >
                       {t('nav.about')}
                     </button>
@@ -49,7 +49,7 @@ const Navigation = () => {
                         scrollToSection('technologies');
                         document.getElementById('sheet-close-button')?.click();
                       }}
-                      className="text-lg text-muted-foreground hover:text-foreground transition-colors"
+                      className="text-xl text-muted-foreground hover:text-foreground transition-colors"
                     >
                       {t('nav.technologies')}
                     </button>
@@ -58,7 +58,7 @@ const Navigation = () => {
                         scrollToSection('experience');
                         document.getElementById('sheet-close-button')?.click();
                       }}
-                      className="text-lg text-muted-foreground hover:text-foreground transition-colors"
+                      className="text-xl text-muted-foreground hover:text-foreground transition-colors"
                     >
                       {t('nav.experience')}
                     </button>
@@ -67,7 +67,7 @@ const Navigation = () => {
                         scrollToSection('projects');
                         document.getElementById('sheet-close-button')?.click();
                       }}
-                      className="text-lg text-muted-foreground hover:text-foreground transition-colors"
+                      className="text-xl text-muted-foreground hover:text-foreground transition-colors"
                     >
                       {t('nav.projects')}
                     </button>
@@ -76,7 +76,7 @@ const Navigation = () => {
                         scrollToSection('education');
                         document.getElementById('sheet-close-button')?.click();
                       }}
-                      className="text-lg text-muted-foreground hover:text-foreground transition-colors"
+                      className="text-xl text-muted-foreground hover:text-foreground transition-colors"
                     >
                       {t('education.title')}
                     </button>
@@ -85,7 +85,7 @@ const Navigation = () => {
                         scrollToSection('contact');
                         document.getElementById('sheet-close-button')?.click();
                       }}
-                      className="text-lg text-muted-foreground hover:text-foreground transition-colors"
+                      className="text-xl text-muted-foreground hover:text-foreground transition-colors"
                     >
                       {t('nav.contact')}
                     </button>
@@ -96,39 +96,39 @@ const Navigation = () => {
               <div className="flex items-center gap-4">
                 <button
                   onClick={() => scrollToSection('about')}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-base text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {t('nav.about')}
                 </button>
                 <button
                   onClick={() => scrollToSection('technologies')}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-base text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {t('nav.technologies')}
                 </button>
 
                 <button
                   onClick={() => scrollToSection('experience')}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-base text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {t('nav.experience')}
                 </button>
                 <button
                   onClick={() => scrollToSection('projects')}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-base text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {t('nav.projects')}
                 </button>
                 <button
                   onClick={() => scrollToSection('education')}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-base text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {t('education.title')}
                 </button>
 
                 <button
                   onClick={() => scrollToSection('contact')}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-base text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {t('nav.contact')}
                 </button>
@@ -138,11 +138,11 @@ const Navigation = () => {
           <div className="flex items-center gap-2">
             <Button
               variant="outline"
-              size="sm"
+              size="default"
               onClick={toggleLanguage}
               className="gap-2"
             >
-              <Languages className="h-4 w-4" />
+              <Languages className="h-5 w-5" />
               {language.toUpperCase()}
             </Button>
           </div>

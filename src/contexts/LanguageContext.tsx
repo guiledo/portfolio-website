@@ -49,7 +49,7 @@ const translations = {
     'education.title': 'Educação e Certificações',
     'nav.contact': 'Contato',
     'hero.greeting': 'Olá, eu sou',
-    'hero.title': 'Engenheiro de Software',
+    'hero.title': 'Desenvolvedor de Software',
     'hero.description': 'Apaixonado por aprender e construir soluções inovadoras com tecnologias modernas',
     'about.title': 'Sobre Mim',
     'about.description': 'Sou um estudante de Ciência da Computação apaixonado por desenvolvimento de software e tecnologia. Atualmente aprendendo desenvolvimento full-stack, gosto de explorar novas tecnologias e construir projetos que resolvem problemas do mundo real. Estou ansioso para ganhar experiência prática e contribuir para soluções de software significativas.',

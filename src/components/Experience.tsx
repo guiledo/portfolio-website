@@ -1,5 +1,5 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Briefcase, ArrowDown } from 'lucide-react';
+import { Briefcase } from 'lucide-react';
 
 const Experience = () => {
   const { t, language } = useLanguage();
@@ -17,9 +17,9 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="min-h-screen flex items-center py-20 relative">
+    <section id="experience" className="flex items-center py-20 relative mb-20">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
           {t('experience.title')}
         </h2>
         <div className="max-w-4xl mx-auto space-y-8">
@@ -35,15 +35,15 @@ const Experience = () => {
                   </div>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold mb-1">{exp.title}</h3>
-                  <p className="text-primary mb-2">{exp.company}</p>
-                  <p className="text-sm text-muted-foreground mb-3">{exp.period}</p>
-                  <p className="text-muted-foreground mb-4">{exp.description}</p>
+                  <h3 className="text-2xl font-semibold mb-1">{exp.title}</h3>
+                  <p className="text-lg text-primary mb-2">{exp.company}</p>
+                  <p className="text-base text-muted-foreground mb-3">{exp.period}</p>
+                  <p className="text-lg text-muted-foreground mb-4">{exp.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {exp.skills.map((skill) => (
                       <span
                         key={skill}
-                        className="text-xs px-3 py-1 bg-primary/10 text-primary rounded-full"
+                        className="text-sm px-3 py-1 bg-primary/10 text-primary rounded-full"
                       >
                         {skill}
                       </span>
@@ -56,9 +56,6 @@ const Experience = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <ArrowDown className="h-6 w-6 text-primary" />
-      </div>
     </section>
   );
 };
