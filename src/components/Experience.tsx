@@ -6,10 +6,10 @@ const Experience = () => {
 
   const experiences = [
     {
-      title: language === 'en' ? 'Open Source Contributor' : 'Contribuidor Open Source',
-      company: language === 'en' ? 'Various Projects' : 'Vários Projetos',
+      title: language === 'en-US' ? 'Open Source Contributor' : 'Contribuidor Open Source',
+      company: language === 'en-US' ? 'Various Projects' : 'Vários Projetos',
       period: '2022 - Present',
-      description: language === 'en'
+      description: language === 'en-US'
         ? 'Contributing to open source projects on GitHub, focusing on documentation improvements and bug fixes. Learning from experienced developers and improving coding practices.'
         : 'Contribuindo para projetos open source no GitHub, focando em melhorias de documentação e correção de bugs. Aprendendo com desenvolvedores experientes e melhorando práticas de código.',
       skills: ['Git', 'GitHub', 'Documentation', 'Collaboration'],

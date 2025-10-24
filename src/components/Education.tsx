@@ -18,24 +18,24 @@ const Education = () => {
     {
       id: 'cs-bachelor',
       type: 'education',
-      title: language === 'en'
+      title: language === 'en-US'
         ? 'Bachelor of Computer Science'
         : 'Bacharelado em Ciência da Computação',
-      issuer: language === 'en'
+      issuer: language === 'en-US'
         ? 'University São Judas Tadeu (USJT)'
         : 'Universidade São Judas Tadeu (USJT)',
       period: '2025 - Present',
-      description: language === 'en'
+      description: language === 'en-US'
         ? 'Currently pursuing Computer Science degree with focus on software engineering, algorithms, data structures, and web development. GPA: 3.8/4.0'
         : 'Atualmente cursando Ciência da Computação com foco em engenharia de software, algoritmos, estruturas de dados e desenvolvimento web. CR: 9.4/10',
     },
     {
       id: 'git-fundamentals',
       type: 'certification',
-      title: language === 'en' ? 'Git and GitHub Fundamentals' : 'Fundamentos de Git e GitHub',
-      issuer: language === 'en' ? 'Alura' : 'Alura',
+      title: language === 'en-US' ? 'Git and GitHub Fundamentals' : 'Fundamentos de Git e GitHub',
+      issuer: language === 'en-US' ? 'Alura' : 'Alura',
       period: '2025',
-      description: language === 'en'
+      description: language === 'en-US'
         ? 'Version control mastery course covering Git workflows, branching strategies, and collaborative development'
         : 'Curso de domínio de controle de versão cobrindo fluxos de trabalho Git, estratégias de branching e desenvolvimento colaborativo',
       skills: ['Git', 'GitHub', 'Version Control', 'Collaboration'],
