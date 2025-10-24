@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="bg-card border-t border-border py-6 px-6 mt-12">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between text-sm text-muted-foreground">
-        <div className="mb-2 md:mb-0 flex items-center gap-2">
+        <div className="mb-4 md:mb-0 flex items-center gap-2 flex-wrap">
           Built with:
           <img src={reactLogo} alt="React" className="h-4 w-4" /> React
           <img src={typescriptLogo} alt="TypeScript" className="h-4 w-4" /> TypeScript

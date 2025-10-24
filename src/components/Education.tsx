@@ -1,11 +1,22 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { GraduationCap, Award, ArrowDown } from 'lucide-react';
 
+interface EducationItem {
+  id: string;
+  type: 'education' | 'certification';
+  title: string;
+  issuer: string;
+  period: string;
+  description: string;
+  skills?: string[];
+}
+
 const Education = () => {
   const { t, language } = useLanguage();
 
-  const educationData = [
+  const educationData: EducationItem[] = [
     {
+      id: 'cs-bachelor',
       type: 'education',
       title: language === 'en'
         ? 'Bachelor of Computer Science'
@@ -14,11 +25,12 @@ const Education = () => {
         ? 'University São Judas Tadeu (USJT)'
         : 'Universidade São Judas Tadeu (USJT)',
       period: '2025 - Present',
-      description: language === "en"
+      description: language === 'en'
         ? 'Currently pursuing Computer Science degree with focus on software engineering, algorithms, data structures, and web development. GPA: 3.8/4.0'
         : 'Atualmente cursando Ciência da Computação com foco em engenharia de software, algoritmos, estruturas de dados e desenvolvimento web. CR: 9.4/10',
     },
     {
+      id: 'git-fundamentals',
       type: 'certification',
       title: language === 'en' ? 'Git and GitHub Fundamentals' : 'Fundamentos de Git e GitHub',
       issuer: language === 'en' ? 'Alura' : 'Alura',
@@ -37,9 +49,9 @@ const Education = () => {
           {t('education.title')}
         </h2>
         <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-          {educationData.map((item, index) => (
+          {educationData.map((item) => (
             <div
-              key={index}
+              key={item.id}
               className="bg-card border border-border rounded-2xl p-6 hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
             >
               <div className="flex gap-4">
