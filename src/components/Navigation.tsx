@@ -138,38 +138,46 @@ const Navigation = () => {
           <div className="flex items-center gap-2">
             <Button
               variant="outline"
-              size="icon"
+              size="default"
               asChild
-            >
-              <a href="mailto:glc.professional42@gmail.com" target="_blank" rel="noopener noreferrer">
-                <Mail className="h-5 w-5" />
-              </a>
-            </Button>
-            <Button
-              variant="outline"
-              size="icon"
-              asChild
-            >
-              <a href="https://wa.me/5511980904699" target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="h-5 w-5" />
-              </a>
-            </Button>
-            <Button
-              variant="outline"
-              size="icon"
-              asChild
-            >
-              <a href="https://www.linkedin.com/in/glc42/" target="_blank" rel="noopener noreferrer">
-                <Linkedin className="h-5 w-5" />
-              </a>
-            </Button>
-            <Button
-              variant="outline"
-              size="icon"
-              asChild
+              className="gap-2"
             >
               <a href="https://github.com/GuiLedo" target="_blank" rel="noopener noreferrer">
                 <Github className="h-5 w-5" />
+                <span>GitHub</span>
+              </a>
+            </Button>
+            <Button
+              variant="outline"
+              size="default"
+              asChild
+              className="gap-2"
+            >
+              <a href="https://www.linkedin.com/in/glc42/" target="_blank" rel="noopener noreferrer">
+                <Linkedin className="h-5 w-5" />
+                <span>LinkedIn</span>
+              </a>
+            </Button>
+            <Button
+              variant="outline"
+              size="default"
+              asChild
+              className="gap-2"
+            >
+              <a href="https://wa.me/5511980904699" target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="h-5 w-5" />
+                <span>WhatsApp</span>
+              </a>
+            </Button>
+            <Button
+              variant="outline"
+              size="default"
+              asChild
+              className="gap-2"
+            >
+              <a href="mailto:glc.professional42@gmail.com" target="_blank" rel="noopener noreferrer">
+                <Mail className="h-5 w-5" />
+                <span>E-mail</span>
               </a>
             </Button>
             <Button
