@@ -162,11 +162,27 @@ const Navigation = () => {
               variant="outline"
               size="default"
               asChild
-              className="gap-2"
+            >
+              <a href="https://wa.me/5511980904699" target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="h-5 w-5" />
+              </a>
+            </Button>
+            <Button
+              variant="outline"
+              size="icon"
+              asChild
             >
               <a href="https://www.linkedin.com/in/glc42/" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="h-5 w-5" />
-                <span>LinkedIn</span>
+              </a>
+            </Button>
+            <Button
+              variant="outline"
+              size="icon"
+              asChild
+            >
+              <a href="https://github.com/GuiLedo" target="_blank" rel="noopener noreferrer">
+                <Github className="h-5 w-5" />
               </a>
             </Button>
             <Button
