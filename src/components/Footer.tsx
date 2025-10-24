@@ -16,7 +16,7 @@ const Footer = () => {
           <img src={vercelLogo} alt="Vercel" className="h-4 w-4" /> Vercel
         </div>
         <div>
-          Copyright © Guilherme Ledo Chagas 2025 All rights Reserved
+          Copyright © Guilherme Ledo 2025 All rights Reserved
         </div>
       </div>
     </footer>
