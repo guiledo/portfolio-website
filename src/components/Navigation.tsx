@@ -1,6 +1,6 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { Languages, Menu } from 'lucide-react';
+import { Languages, Menu, Mail, MessageCircle, Linkedin, Github } from 'lucide-react';
 import logo from '@/assets/logo.png';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { useIsMobile } from '@/hooks/use-mobile';
@@ -136,6 +136,42 @@ const Navigation = () => {
             )}
           </div>
           <div className="flex items-center gap-2">
+            <Button
+              variant="outline"
+              size="icon"
+              asChild
+            >
+              <a href="mailto:glc.professional42@gmail.com" target="_blank" rel="noopener noreferrer">
+                <Mail className="h-5 w-5" />
+              </a>
+            </Button>
+            <Button
+              variant="outline"
+              size="icon"
+              asChild
+            >
+              <a href="https://wa.me/5511980904699" target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="h-5 w-5" />
+              </a>
+            </Button>
+            <Button
+              variant="outline"
+              size="icon"
+              asChild
+            >
+              <a href="https://www.linkedin.com/in/glc42/" target="_blank" rel="noopener noreferrer">
+                <Linkedin className="h-5 w-5" />
+              </a>
+            </Button>
+            <Button
+              variant="outline"
+              size="icon"
+              asChild
+            >
+              <a href="https://github.com/GuiLedo" target="_blank" rel="noopener noreferrer">
+                <Github className="h-5 w-5" />
+              </a>
+            </Button>
             <Button
               variant="outline"
               size="default"
