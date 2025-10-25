@@ -115,7 +115,7 @@ const Navigation = () => {
                 <div className="h-4 w-px bg-border" />
                 <button
                   onClick={() => scrollToSection('technologies')}
-                  className="text-base text-muted-foreground hover:text-foreground transition-colors"
+                  className="w-32 text-base text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {t('nav.technologies')}
                 </button>
@@ -178,7 +178,7 @@ const Navigation = () => {
               variant="outline"
               size="default"
               onClick={toggleLanguage}
-              className="gap-2"
+              className="w-28 gap-2"
             >
               <Languages className="h-5 w-5" />
               {language.toUpperCase()}

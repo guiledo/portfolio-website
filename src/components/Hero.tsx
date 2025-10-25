@@ -23,7 +23,7 @@ const Hero = () => {
           </p>
           {/* Desktop Button */}
           <div className="hidden md:flex justify-start">
-            <Button asChild variant="secondary" size="lg" className="rounded-full border border-primary animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400 hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+            <Button asChild variant="secondary" size="lg" className="w-40 rounded-full border border-primary animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400 hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
               <a href="https://pub-a692cbd978d740f4af91b3dcd6b3d39c.r2.dev/Guilherme-Ledo-Resume.pdf" target="_blank" rel="noopener noreferrer">
                 <Download className="h-4 w-4 mr-2" />
                 {t('hero.resume')}
@@ -40,7 +40,7 @@ const Hero = () => {
         </div>
         {/* Mobile Button */}
         <div className="flex md:hidden justify-center mt-8 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400">
-          <Button asChild variant="secondary" size="lg" className="rounded-full border border-primary hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+          <Button asChild variant="secondary" size="lg" className="w-40 rounded-full border border-primary hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
             <a href="https://pub-a692cbd978d740f4af91b3dcd6b3d39c.r2.dev/Guilherme-Ledo-Resume.pdf" target="_blank" rel="noopener noreferrer">
               <Download className="h-4 w-4 mr-2" />
               {t('hero.resume')}
