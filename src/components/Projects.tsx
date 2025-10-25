@@ -78,45 +78,49 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-card border border-border rounded-2xl overflow-hidden hover:border-primary transition-all duration-300 group hover:shadow-lg hover:shadow-primary/10"
+              className="bg-card border border-border rounded-2xl overflow-hidden hover:border-primary transition-all duration-300 group hover:shadow-lg hover:shadow-primary/10 flex flex-col"
             >
               <div className="h-48 bg-secondary/50 flex items-center justify-center">
                 <div className="text-6xl opacity-20 group-hover:opacity-30 transition-opacity">
                   {'</>'}
                 </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-base text-muted-foreground mb-3">{project.description}</p>
-                <div className="mb-3">
-                  <p className="text-sm font-medium text-primary mb-1">
-                    {language === 'en-US' ? 'Impact:' : 'Impacto:'}
-                  </p>
-                  <p className="text-sm text-muted-foreground">{project.impact}</p>
+              <div className="p-6 flex flex-col flex-grow">
+                <div className="flex-grow">
+                  <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
+                  <p className="text-base text-muted-foreground mb-3">{project.description}</p>
+                  <div className="mb-3">
+                    <p className="text-sm font-medium text-primary mb-1">
+                      {language === 'en-US' ? 'Impact:' : 'Impacto:'}
+                    </p>
+                    <p className="text-sm text-muted-foreground">{project.impact}</p>
+                  </div>
                 </div>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tech.map((tech) => (
-                    <span
-                      key={tech}
-                      className="text-sm px-3 py-1 bg-primary/10 text-primary rounded-full"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                <div className="flex gap-3">
-                  <Button variant="outline" size="default" className="gap-2" asChild>
-                    <a href={project.github} target="_blank" rel="noopener noreferrer">
-                      <Github className="h-4 w-4" />
-                      Code
-                    </a>
-                  </Button>
-                  <Button variant="outline" size="default" className="gap-2" asChild>
-                    <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="h-4 w-4" />
-                      Demo
-                    </a>
-                  </Button>
+                <div className="mt-auto">
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tech.map((tech) => (
+                      <span
+                        key={tech}
+                        className="text-sm px-3 py-1 bg-primary/10 text-primary rounded-full"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex gap-3">
+                    <Button variant="outline" size="default" className="gap-2" asChild>
+                      <a href={project.github} target="_blank" rel="noopener noreferrer">
+                        <Github className="h-4 w-4" />
+                        Code
+                      </a>
+                    </Button>
+                    <Button variant="outline" size="default" className="gap-2" asChild>
+                      <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="h-4 w-4" />
+                        Demo
+                      </a>
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>

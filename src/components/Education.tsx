@@ -26,8 +26,8 @@ const Education = () => {
         : 'Universidade São Judas Tadeu (USJT)',
       period: '2025 - Present',
       description: language === 'en-US'
-        ? 'Currently pursuing Computer Science degree with focus on software engineering, algorithms, data structures, and web development. GPA: 3.8/4.0'
-        : 'Atualmente cursando Ciência da Computação com foco em engenharia de software, algoritmos, estruturas de dados e desenvolvimento web. CR: 9.4/10',
+        ? 'Currently pursuing Computer Science degree with focus on software engineering, algorithms, data structures, and web development. GPA: 3.58/4.0'
+        : 'Atualmente cursando Ciência da Computação com foco em engenharia de software, algoritmos, estruturas de dados e desenvolvimento web. CR: 9.24/10',
     },
     {
       id: 'git-fundamentals',

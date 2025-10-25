@@ -111,32 +111,35 @@ const Navigation = () => {
                 >
                   {t('nav.about')}
                 </button>
+                <div className="h-4 w-px bg-border" />
                 <button
                   onClick={() => scrollToSection('technologies')}
                   className="text-base text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {t('nav.technologies')}
                 </button>
-
+                <div className="h-4 w-px bg-border" />
                 <button
                   onClick={() => scrollToSection('experience')}
                   className="text-base text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {t('nav.experience')}
                 </button>
+                <div className="h-4 w-px bg-border" />
                 <button
                   onClick={() => scrollToSection('projects')}
                   className="text-base text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {t('nav.projects')}
                 </button>
+                <div className="h-4 w-px bg-border" />
                 <button
                   onClick={() => scrollToSection('education')}
                   className="text-base text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {t('education.title')}
                 </button>
-
+                <div className="h-4 w-px bg-border" />
                 <button
                   onClick={() => scrollToSection('contact')}
                   className="text-base text-muted-foreground hover:text-foreground transition-colors"
@@ -162,29 +165,14 @@ const Navigation = () => {
               variant="outline"
               size="default"
               asChild
-            >
-              <a href="https://wa.me/5511980904699" target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="h-5 w-5" />
-              </a>
-            </Button>
-            <Button
-              variant="outline"
-              size="icon"
-              asChild
+              className="gap-2"
             >
               <a href="https://www.linkedin.com/in/glc42/" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="h-5 w-5" />
+                <span>LinkedIn</span>
               </a>
             </Button>
-            <Button
-              variant="outline"
-              size="icon"
-              asChild
-            >
-              <a href="https://github.com/GuiLedo" target="_blank" rel="noopener noreferrer">
-                <Github className="h-5 w-5" />
-              </a>
-            </Button>
+
             <Button
               variant="outline"
               size="default"
