@@ -7,7 +7,7 @@ const Hero = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="hero" className="flex items-center py-20 relative mb-20">
+    <section id="hero" className="flex items-center relative min-h-[calc(100vh-6rem)]">
       <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
         <div className="max-w-3xl text-center md:text-left">
           <p className="text-lg text-primary font-medium mb-4 animate-in fade-in slide-in-from-bottom-4 duration-700">
@@ -24,9 +24,9 @@ const Hero = () => {
           {/* Desktop Button */}
           <div className="hidden md:flex justify-start">
             <Button asChild variant="secondary" size="lg" className="rounded-full border border-primary animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400 hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="https://pub-a692cbd978d740f4af91b3dcd6b3d39c.r2.dev/Guilherme-Ledo-Resume.pdf" target="_blank" rel="noopener noreferrer">
                 <Download className="h-4 w-4 mr-2" />
-                Resume
+                {t('hero.resume')}
               </a>
             </Button>
           </div>
@@ -41,9 +41,9 @@ const Hero = () => {
         {/* Mobile Button */}
         <div className="flex md:hidden justify-center mt-8 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400">
           <Button asChild variant="secondary" size="lg" className="rounded-full border border-primary hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://pub-a692cbd978d740f4af91b3dcd6b3d39c.r2.dev/Guilherme-Ledo-Resume.pdf" target="_blank" rel="noopener noreferrer">
               <Download className="h-4 w-4 mr-2" />
-              Resume
+              {t('hero.resume')}
             </a>
           </Button>
         </div>
