@@ -40,7 +40,7 @@ const Navigation = () => {
             <div className="flex-grow flex justify-center">
               <Sheet>
                 <SheetTrigger asChild>
-                  <Button variant="outline" size="icon" className="mr-2">
+                  <Button variant="outline" size={isMobile ? "default" : "icon"} className="mr-2">
                     <Menu className="h-6 w-6" />
                   </Button>
                 </SheetTrigger>
@@ -106,7 +106,7 @@ const Navigation = () => {
               </Sheet>
             </div>
           ) : (
-            <div className="flex-grow flex items-center justify-center gap-4">
+            <div className="flex-grow flex items-center justify-start gap-4">
               <button
                 onClick={() => scrollToSection('about')}
                 className="text-base text-muted-foreground hover:text-foreground transition-colors"
