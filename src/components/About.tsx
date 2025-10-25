@@ -1,5 +1,6 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Code2, Database, Terminal, Target, MapPin, Calendar, Languages } from 'lucide-react';
+import { Code2, Database, Terminal, Target, MapPin, Calendar } from 'lucide-react';
+import { FaGlobe } from 'react-icons/fa';
 
 const About = () => {
   const { t } = useLanguage();
@@ -21,7 +22,7 @@ const About = () => {
       content: t('careerObjectives.availability.content'),
     },
     {
-      icon: Languages,
+      icon: FaGlobe,
       title: t('careerObjectives.language.title'),
       content: t('careerObjectives.language.content'),
     },

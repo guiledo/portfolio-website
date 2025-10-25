@@ -1,6 +1,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { Languages, Menu, Linkedin, Github } from 'lucide-react';
+import { Languages, Menu } from 'lucide-react';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import logo from '@/assets/logo.png';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { useIsMobile } from '@/hooks/use-mobile';
@@ -157,7 +158,7 @@ const Navigation = () => {
               className="gap-2"
             >
               <a href="https://github.com/GuiLedo" target="_blank" rel="noopener noreferrer">
-                <Github className="h-5 w-5" />
+                <FaGithub className="h-5 w-5" />
                 <span>GitHub</span>
               </a>
             </Button>
@@ -168,7 +169,7 @@ const Navigation = () => {
               className="gap-2"
             >
               <a href="https://www.linkedin.com/in/glc42/" target="_blank" rel="noopener noreferrer">
-                <Linkedin className="h-5 w-5" />
+                <FaLinkedin className="h-5 w-5" />
                 <span>LinkedIn</span>
               </a>
             </Button>
