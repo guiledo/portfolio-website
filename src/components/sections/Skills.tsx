@@ -31,7 +31,6 @@ const Skills = () => {
     'Git Bash': { type: 'image', src: gitbash },
     'VS Code': { type: 'image', src: vscode },
     'Cursor': { type: 'icon', component: MousePointer },
-    'Gemini CLI': { type: 'icon', component: Sparkles },
     'Linux': { type: 'image', src: linux },
   };
 
