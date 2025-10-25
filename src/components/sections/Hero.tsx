@@ -7,7 +7,7 @@ const Hero = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="hero" className="flex items-center relative min-h-[calc(100vh-6rem)]">
+    <section id="hero" className="flex items-center relative min-h-[calc(100vh-6rem)] md:h-screen">
       <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
         <div className="max-w-3xl text-center md:text-left">
           <p className="text-lg text-primary font-medium mb-4 animate-in fade-in slide-in-from-bottom-4 duration-700">
