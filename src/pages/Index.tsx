@@ -1,15 +1,15 @@
 import { LanguageProvider } from '@/contexts/LanguageContext';
-import Navigation from '@/components/Navigation';
-import Hero from '@/components/Hero';
-import About from '@/components/About';
-import Skills from '@/components/Skills';
+import Navigation from '@/components/sections/Navigation';
+import Hero from '@/components/sections/Hero';
+import About from '@/components/sections/About';
+import Skills from '@/components/sections/Skills';
 
-import Experience from '@/components/Experience';
-import Projects from '@/components/Projects';
-import Education from '@/components/Education';
+import Experience from '@/components/sections/Experience';
+import Projects from '@/components/sections/Projects';
+import Education from '@/components/sections/Education';
 
-import Contact from '@/components/Contact';
-import Footer from '@/components/Footer';
+import Contact from '@/components/sections/Contact';
+import Footer from '@/components/sections/Footer';
 import BackgroundElements from '@/components/BackgroundElements';
 
 const Index = () => {
