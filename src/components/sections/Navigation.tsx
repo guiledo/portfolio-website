@@ -40,7 +40,7 @@ const Navigation = () => {
             {isMobile ? (
               <Sheet>
                 <SheetTrigger asChild>
-                  <Button variant="outline" size="icon">
+                  <Button variant="outline" size="icon" className="mr-2">
                     <Menu className="h-6 w-6" />
                   </Button>
                 </SheetTrigger>
@@ -150,7 +150,7 @@ const Navigation = () => {
               </div>
             )}
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-4">
             <Button
               variant="outline"
               size="default"
@@ -159,7 +159,7 @@ const Navigation = () => {
             >
               <a href="https://github.com/GuiLedo" target="_blank" rel="noopener noreferrer">
                 <FaGithub className="h-5 w-5" />
-                <span>GitHub</span>
+                {!isMobile && <span>GitHub</span>}
               </a>
             </Button>
             <Button
@@ -170,7 +170,7 @@ const Navigation = () => {
             >
               <a href="https://www.linkedin.com/in/glc42/" target="_blank" rel="noopener noreferrer">
                 <FaLinkedin className="h-5 w-5" />
-                <span>LinkedIn</span>
+                {!isMobile && <span>LinkedIn</span>}
               </a>
             </Button>
 
@@ -181,7 +181,7 @@ const Navigation = () => {
               className="w-28 gap-2"
             >
               <Languages className="h-5 w-5" />
-              {language.toUpperCase()}
+              {isMobile ? (language === 'en-US' ? 'EN' : 'PT') : language.toUpperCase()}
             </Button>
           </div>
         </div>
