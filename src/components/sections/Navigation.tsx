@@ -180,7 +180,7 @@ const Navigation = () => {
               onClick={toggleLanguage}
               className={isMobile ? "gap-2 active:bg-primary active:text-primary-foreground" : "w-28 gap-2"}
             >
-              <Languages className="h-5 w-5" />
+              {!isMobile && <Languages className="h-5 w-5" />}
               {isMobile ? (language === 'en-US' ? 'EN' : 'PT') : language.toUpperCase()}
             </Button>
           </div>
