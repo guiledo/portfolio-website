@@ -3,6 +3,7 @@ import reactLogo from '@/assets/react.png';
 import typescriptLogo from '@/assets/typescript.png';
 import viteLogo from '@/assets/vite.svg';
 import vercelLogo from '@/assets/vercel.svg';
+import cloudflareLogo from '@/assets/Cloudflare.svg';
 
 const Footer = () => {
   return (
@@ -14,6 +15,7 @@ const Footer = () => {
           <img src={typescriptLogo} alt="TypeScript" className="h-4 w-4" /> TypeScript
           <img src={viteLogo} alt="Vite" className="h-4 w-4" /> Vite
           <img src={vercelLogo} alt="Vercel" className="h-4 w-4" /> Vercel
+          <img src={cloudflareLogo} alt="Cloudflare" className="h-4 w-4" /> Cloudflare
         </div>
         <div>
           Copyright © Guilherme Ledo 2025 All rights Reserved
