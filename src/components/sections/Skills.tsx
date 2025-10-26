@@ -1,11 +1,12 @@
-import { useLanguage } from '@/contexts/LanguageContext';
-import { Code2, Database, Terminal, Code, Server, GitBranch, Laptop, MousePointer, Sparkles, Atom, Palette } from 'lucide-react';
+import { useLanguage } from '@/hooks/use-language';
+import { Code, MousePointer } from 'lucide-react';
+import { skillsData } from '@/data/skills';
 import github from '@/assets/github.png';
 import linux from '@/assets/linux.png';
 import nodejs from '@/assets/nodejs.png';
 import react from '@/assets/react.png';
 import typescript from '@/assets/typescript.png';
-import gitbash from '@/assets/git bash.png';
+import gitbash from '@/assets/git-bash.png';
 import tailwind from '@/assets/tailwind.png';
 import vscode from '@/assets/vscode.png';
 import css from '@/assets/css.png';
@@ -34,12 +35,6 @@ const Skills = () => {
     'Linux': { type: 'image', src: linux },
   };
 
-  const skills = [
-    { icon: Code2, label: t('about.frontend.label'), tech: ['React.js', 'Typescript', 'HTML', 'CSS', 'Tailwind CSS'] },
-    { icon: Server, label: t('backend.label'), tech: ['Node.js', 'PostgreSQL', 'MongoDB', 'API REST'] },
-    { icon: Terminal, label: t('skills.tools.label'), tech: ['Git / GitHub', 'Git Bash', 'VS Code', 'Linux'] },
-  ];
-
   return (
     <section id="technologies" className="flex items-center py-20 relative mb-20">
       <div className="container mx-auto px-6">
@@ -47,14 +42,14 @@ const Skills = () => {
           {t('nav.technologies')}
         </h2>
         <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto"> {/* Adjusted grid for 3 items */}
-          {skills.map((skill) => (
+          {skillsData.map((skill) => (
             <div
-              key={skill.label}
+              key={skill.labelKey}
               className="bg-card border border-border rounded-2xl p-6 hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
             >
               <div className="flex items-center gap-3 mb-6"> {/* Increased margin-bottom from mb-4 to mb-6 */}
                 <skill.icon className="h-8 w-8 text-primary" />
-                <h3 className="font-semibold text-xl">{skill.label}</h3> {/* Added text-lg */}
+                <h3 className="font-semibold text-xl">{t(skill.labelKey)}</h3> {/* Added text-lg */}
               </div>
               <div className="flex flex-col gap-2 text-lg text-muted-foreground"> {/* Increased gap from gap-1 to gap-2 */}
                 {skill.tech.map((techItem, techIndex) => {

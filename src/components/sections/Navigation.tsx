@@ -1,4 +1,4 @@
-import { useLanguage } from '@/contexts/LanguageContext';
+import { useLanguage } from '@/hooks/use-language';
 import { Button } from '@/components/ui/button';
 import { Languages, Menu } from 'lucide-react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';

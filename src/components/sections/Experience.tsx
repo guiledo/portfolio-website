@@ -1,20 +1,9 @@
-import { useLanguage } from '@/contexts/LanguageContext';
+import { useLanguage } from '@/hooks/use-language';
 import { Briefcase } from 'lucide-react';
+import { experiencesData } from '@/data/experience';
 
 const Experience = () => {
-  const { t, language } = useLanguage();
-
-  const experiences = [
-    {
-      title: language === 'en-US' ? 'Open Source Contributor' : 'Contribuidor Open Source',
-      company: language === 'en-US' ? 'Various Projects' : 'Vários Projetos',
-      period: '2022 - Present',
-      description: language === 'en-US'
-        ? 'Contributing to open source projects on GitHub, focusing on documentation improvements and bug fixes. Learning from experienced developers and improving coding practices.'
-        : 'Contribuindo para projetos open source no GitHub, focando em melhorias de documentação e correção de bugs. Aprendendo com desenvolvedores experientes e melhorando práticas de código.',
-      skills: ['Git', 'GitHub', 'Documentation', 'Collaboration'],
-    },
-  ];
+  const { t } = useLanguage();
 
   return (
     <section id="experience" className="flex items-center py-20 relative mb-20">
@@ -23,7 +12,7 @@ const Experience = () => {
           {t('experience.title')}
         </h2>
         <div className="max-w-4xl mx-auto space-y-8">
-          {experiences.map((exp, index) => (
+          {experiencesData.map((exp, index) => (
             <div
               key={index}
               className="bg-card border border-border rounded-2xl p-6 hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
@@ -35,10 +24,10 @@ const Experience = () => {
                   </div>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-semibold mb-1">{exp.title}</h3>
-                  <p className="text-lg text-primary mb-2">{exp.company}</p>
+                  <h3 className="text-2xl font-semibold mb-1">{t(exp.titleKey)}</h3>
+                  <p className="text-lg text-primary mb-2">{t(exp.companyKey)}</p>
                   <p className="text-base text-muted-foreground mb-3">{exp.period}</p>
-                  <p className="text-lg text-muted-foreground mb-4">{exp.description}</p>
+                  <p className="text-lg text-muted-foreground mb-4">{t(exp.descriptionKey)}</p>
                   <div className="flex flex-wrap gap-2">
                     {exp.skills.map((skill) => (
                       <span

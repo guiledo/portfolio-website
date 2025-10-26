@@ -1,9 +1,9 @@
-import { useLanguage } from '@/contexts/LanguageContext';
+import { useLanguage } from '@/hooks/use-language';
 import { Mail, Github, MessageCircle, Linkedin } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+
 
 const Contact = () => {
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
 
   const contacts = [
     {

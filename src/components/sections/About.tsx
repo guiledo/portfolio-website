@@ -1,34 +1,8 @@
-import { useLanguage } from '@/contexts/LanguageContext';
-import { Code2, Database, Terminal, Target, MapPin, Calendar } from 'lucide-react';
-import { FaGlobe } from 'react-icons/fa';
+import { useLanguage } from '@/hooks/use-language';
+import { objectivesData } from '@/data/about';
 
 const About = () => {
   const { t } = useLanguage();
-
-  const objectives = [
-    {
-      icon: Target,
-      title: t('careerObjectives.goals.title'),
-      content: t('careerObjectives.goals.content'),
-    },
-    {
-      icon: MapPin,
-      title: t('careerObjectives.location.title'),
-      content: t('careerObjectives.location.content'),
-    },
-    {
-      icon: Calendar,
-      title: t('careerObjectives.availability.title'),
-      content: t('careerObjectives.availability.content'),
-    },
-    {
-      icon: FaGlobe,
-      title: t('careerObjectives.language.title'),
-      content: t('careerObjectives.language.content'),
-    },
-  ];
-
-
 
   return (
     <section id="about" className="flex items-center py-20 relative mb-20">
@@ -41,7 +15,7 @@ const About = () => {
             {t('about.description')}
           </p>
           <div className="max-w-4xl mx-auto space-y-8 mt-12"> {/* Added mt-12 for spacing */}
-            {objectives.map((objective, index) => (
+            {objectivesData.map((objective, index) => (
               <div
                 key={index}
                 className="bg-card border border-border rounded-2xl p-6 hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
@@ -53,8 +27,8 @@ const About = () => {
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-semibold mb-3">{objective.title}</h3>
-                    <p className="text-lg text-muted-foreground leading-relaxed">{objective.content}</p>
+                    <h3 className="text-2xl font-semibold mb-3">{t(objective.titleKey)}</h3>
+                    <p className="text-lg text-muted-foreground leading-relaxed">{t(objective.contentKey)}</p>
                   </div>
                 </div>
               </div>

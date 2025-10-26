@@ -1,7 +1,7 @@
 import { ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import officeMe from '@/assets/office-me.png';
-import { useLanguage } from '@/contexts/LanguageContext';
+import { useLanguage } from '@/hooks/use-language';
 
 const Hero = () => {
   const { t } = useLanguage();
