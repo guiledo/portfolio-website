@@ -50,32 +50,11 @@ All colors MUST be HSL.
   body {
     @apply text-foreground;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    background-color: hsl(var(--background));
-    background-image: 
-      repeating-linear-gradient(
-        45deg,
-        transparent,
-        transparent 35px,
-        hsl(var(--primary) / 0.03) 35px,
-        hsl(var(--primary) / 0.03) 70px
-      ),
-      repeating-linear-gradient(
-        -45deg,
-        transparent,
-        transparent 35px,
-        hsl(var(--primary) / 0.02) 35px,
-        hsl(var(--primary) / 0.02) 70px
-      ),
-      radial-gradient(
-        circle at 20% 30%,
-        hsl(var(--primary) / 0.08) 0%,
-        transparent 40%
-      ),
-      radial-gradient(
-        circle at 80% 70%,
-        hsl(var(--primary) / 0.06) 0%,
-        transparent 40%
-      );
+    background: linear-gradient(180deg, 
+      hsl(220 30% 8%) 0%, 
+      hsl(200 35% 12%) 50%, 
+      hsl(190 40% 15%) 100%
+    );
     background-attachment: fixed;
     position: relative;
     overflow-x: hidden;
@@ -88,10 +67,26 @@ All colors MUST be HSL.
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2329d9e8' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M0 50 Q 25 40, 50 50 T 100 50' stroke='%2329d9e8' stroke-width='0.5' fill='none' opacity='0.1'/%3E%3Cpath d='M0 60 Q 25 50, 50 60 T 100 60' stroke='%2329d9e8' stroke-width='0.5' fill='none' opacity='0.08'/%3E%3Cpath d='M0 70 Q 25 65, 50 70 T 100 70' stroke='%2329d9e8' stroke-width='0.5' fill='none' opacity='0.06'/%3E%3C/svg%3E");
+    background-size: 200px 100px;
     pointer-events: none;
     z-index: 0;
-    opacity: 0.4;
+    opacity: 0.6;
+  }
+  
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(ellipse at 20% 20%, hsl(var(--primary) / 0.15) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 80%, hsl(var(--primary) / 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, hsl(var(--primary) / 0.05) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
   }
   
   body > * {
