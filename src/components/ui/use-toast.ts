@@ -113,6 +113,13 @@ const addToRemoveQueue = (toastId: string) => {
   toastTimeouts.set(toastId, timeout);
 };
 
+let count = 0;
+
+function genId() {
+  count = (count + 1) % Number.MAX_SAFE_INTEGER;
+  return count.toString();
+}
+
 type Toast = Omit<ToasterToast, "id">;
 
 export function toast({ ...props }: Toast) {
