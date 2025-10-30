@@ -10,7 +10,6 @@ import Education from '@/components/sections/Education';
 
 import Contact from '@/components/sections/Contact';
 import Footer from '@/components/sections/Footer';
-import BackgroundElements from '@/components/BackgroundElements';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 const Index = () => {
@@ -18,7 +17,6 @@ const Index = () => {
   return (
     <LanguageProvider>
       <div className="min-h-screen">
-        <BackgroundElements />
         <Navigation />
         <main className={isMobile ? "pt-[112px]" : ""}>
           <Hero />
