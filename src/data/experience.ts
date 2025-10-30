@@ -1,9 +1,9 @@
 export const experiencesData = [
   {
-    titleKey: 'experience.openSource.title',
-    companyKey: 'experience.openSource.company',
-    period: '2022 - Present',
-    descriptionKey: 'experience.openSource.description',
-    skills: ['Git', 'GitHub', 'Documentation', 'Collaboration'],
+    titleKey: 'experience.seeking.title',
+    companyKey: 'experience.seeking.company',
+    period: 'Present',
+    descriptionKey: 'experience.seeking.description',
+    skills: ['Problem Solving', 'Teamwork', 'Fast Learner'],
   },
 ];
