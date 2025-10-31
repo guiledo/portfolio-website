@@ -28,7 +28,7 @@ const Contact = () => {
       icon: Github,
       label: t('contact.github'),
       value: 'github.com/GuiLedo',
-      href: 'https://github.com/GuiLedo',
+      href: 'https://github.com/guiledo',
     },
   ];
 

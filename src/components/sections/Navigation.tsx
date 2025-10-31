@@ -157,7 +157,7 @@ const Navigation = () => {
               asChild
               className="gap-2"
             >
-              <a href="https://github.com/GuiLedo" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/guiledo" target="_blank" rel="noopener noreferrer">
                 <FaGithub className="h-5 w-5" />
                 {!isMobile && <span>GitHub</span>}
               </a>
