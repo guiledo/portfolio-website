@@ -15,6 +15,7 @@ import postgresql from '@/assets/postgresql.png';
 import mongodb from '@/assets/mongodb.png';
 import restapi from '@/assets/restapi.png';
 import vite from '@/assets/vite.svg';
+import nextjs from '@/assets/nextjs.svg';
 import shadcn from '@/assets/shadcn-ui-seeklogo.svg';
 
 const Skills = () => {
@@ -35,6 +36,7 @@ const Skills = () => {
     'Git': { type: 'image', src: git },
     'Cursor': { type: 'icon', component: MousePointer },
     'Linux / Bash': { type: 'image', src: linux },
+    'Next.js': { type: 'image', src: nextjs },
     'Vite': { type: 'image', src: vite },
     'NeoVim': { type: 'image', src: neovim },
   };
