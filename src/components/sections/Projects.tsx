@@ -18,11 +18,6 @@ const Projects = () => {
               key={index}
               className="bg-card border border-border rounded-2xl overflow-hidden hover:border-primary transition-all duration-300 group hover:shadow-lg hover:shadow-primary/10 flex flex-col"
             >
-              <div className="h-48 bg-secondary/50 flex items-center justify-center">
-                <div className="text-6xl opacity-20 group-hover:opacity-30 transition-opacity">
-                  {'</>'}
-                </div>
-              </div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow">
                   <h3 className="text-2xl font-semibold mb-2">{project.title[language]}</h3>
