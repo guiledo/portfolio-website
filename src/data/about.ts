@@ -1,12 +1,7 @@
-import { Target, MapPin, Calendar } from 'lucide-react';
+import { MapPin, Calendar } from 'lucide-react';
 import { FaGlobe } from 'react-icons/fa';
 
 export const objectivesData = [
-  {
-    icon: Target,
-    titleKey: 'careerObjectives.goals.title',
-    contentKey: 'careerObjectives.goals.content',
-  },
   {
     icon: MapPin,
     titleKey: 'careerObjectives.location.title',
