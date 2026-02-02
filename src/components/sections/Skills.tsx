@@ -1,19 +1,21 @@
 import { useLanguage } from '@/hooks/use-language';
 import { Code, MousePointer } from 'lucide-react';
 import { skillsData } from '@/data/skills';
-import github from '@/assets/github.png';
 import linux from '@/assets/linux.png';
+import neovim from '@/assets/neovim.png';
+import bun from '@/assets/Bun.svg';
 import nodejs from '@/assets/nodejs.png';
 import react from '@/assets/react.png';
 import typescript from '@/assets/typescript.png';
-import gitbash from '@/assets/git-bash.png';
+import git from '@/assets/git.png';
 import tailwind from '@/assets/tailwind.png';
-import vscode from '@/assets/vscode.png';
 import css from '@/assets/css.png';
 import html5 from '@/assets/html-5.png';
 import postgresql from '@/assets/postgresql.png';
 import mongodb from '@/assets/mongodb.png';
 import restapi from '@/assets/restapi.png';
+import vite from '@/assets/vite.svg';
+import shadcn from '@/assets/shadcn-ui-seeklogo.svg';
 
 const Skills = () => {
   const { t } = useLanguage();
@@ -24,15 +26,17 @@ const Skills = () => {
     'HTML': { type: 'image', src: html5 }, // Changed to image
     'CSS': { type: 'image', src: css }, // Changed to image
     'Tailwind CSS': { type: 'image', src: tailwind },
+    'Shadcn UI': { type: 'image', src: shadcn },
+    'Bun': { type: 'image', src: bun },
     'Node.js': { type: 'image', src: nodejs },
     'PostgreSQL': { type: 'image', src: postgresql }, // Changed to image
     'MongoDB': { type: 'image', src: mongodb }, // Changed to image
     'API REST': { type: 'image', src: restapi }, // Added API REST
-    'Git / GitHub': { type: 'image', src: github },
-    'Git Bash': { type: 'image', src: gitbash },
-    'VS Code': { type: 'image', src: vscode },
+    'Git': { type: 'image', src: git },
     'Cursor': { type: 'icon', component: MousePointer },
-    'Linux': { type: 'image', src: linux },
+    'Linux / Bash': { type: 'image', src: linux },
+    'Vite': { type: 'image', src: vite },
+    'NeoVim': { type: 'image', src: neovim },
   };
 
   return (
