@@ -18,9 +18,6 @@ const Hero = () => {
           <h2 className="text-3xl md:text-4xl text-muted-foreground mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
             {t('hero.title')}
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
-            {t('hero.description')}
-          </p>
           {/* Desktop Button */}
           <div className="hidden md:flex justify-start">
             <Button asChild variant="secondary" size="lg" className="w-40 rounded-full border border-primary animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400 hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
