@@ -48,7 +48,7 @@ const Education = () => {
       period: 'Nov 2025',
       descriptionKey: 'cert.react_node.desc',
       skills: ['React.js', 'Node.js', 'API Development'],
-      credentialUrl: '#',
+      credentialUrl: 'https://cursos.alura.com.br/certificate/843c1cd7-1a64-4821-b5ba-38ca5de25556?lang=en',
     },
     {
       id: 'node-terminal',
@@ -58,7 +58,7 @@ const Education = () => {
       period: 'Nov 2025',
       descriptionKey: 'cert.node_terminal.desc',
       skills: ['Node.js', 'Bash', 'Linux'],
-      credentialUrl: '#',
+      credentialUrl: 'https://cursos.alura.com.br/certificate/e1ca0b37-0bf4-4560-b415-2d85c5bbebb6?lang=en',
     },
     {
       id: 'postgresql',
@@ -68,7 +68,7 @@ const Education = () => {
       period: 'Dez 2025',
       descriptionKey: 'cert.postgresql.desc',
       skills: ['PostgreSQL', 'Relational Databases'],
-      credentialUrl: '#',
+      credentialUrl: 'https://cursos.alura.com.br/certificate/35fa1772-8183-4c12-ba1f-e97e60a74c65?lang=en',
     },
     {
       id: 'mongodb-nosql',
@@ -78,7 +78,7 @@ const Education = () => {
       period: 'Jan 2026',
       descriptionKey: 'cert.mongodb.desc',
       skills: ['MongoDB', 'NoSQL'],
-      credentialUrl: '#',
+      credentialUrl: 'https://cursos.alura.com.br/certificate/4ad07977-738b-45e0-9c9b-081704e590bf?lang=en',
     },
     {
       id: 'react-hooks',
@@ -88,7 +88,7 @@ const Education = () => {
       period: 'Oct 2025',
       descriptionKey: 'cert.react_hooks.desc',
       skills: ['React.js', 'JavaScript', 'TypeScript'],
-      credentialUrl: '#',
+      credentialUrl: 'https://cursos.alura.com.br/degree/certificate/3fa050a0-e0f5-41ef-bf57-71c1fe86b08e?lang=en',
     },
     {
       id: 'tailwind-css',
@@ -98,7 +98,7 @@ const Education = () => {
       period: 'Oct 2025',
       descriptionKey: 'cert.tailwind.desc',
       skills: ['Tailwind CSS', 'CSS', 'HTML', 'JavaScript', 'TypeScript'],
-      credentialUrl: '#',
+      credentialUrl: 'https://cursos.alura.com.br/certificate/7f778b65-73d8-4e76-93a7-e4178cfe225c?lang=en',
     },
     {
       id: 'html-css',
@@ -108,7 +108,7 @@ const Education = () => {
       period: 'Oct 2025',
       descriptionKey: 'cert.html_css.desc',
       skills: ['CSS', 'HTML'],
-      credentialUrl: '#',
+      credentialUrl: 'https://cursos.alura.com.br/degree/certificate/e4a9f5c6-bd0b-49dc-aff3-78ac974a0ab3?lang=en',
     },
     {
       id: 'js-backend',
@@ -118,7 +118,7 @@ const Education = () => {
       period: 'Aug 2025',
       descriptionKey: 'cert.js_backend.desc',
       skills: ['Node.js', 'JavaScript', 'TypeScript'],
-      credentialUrl: '#',
+      credentialUrl: 'https://cursos.alura.com.br/degree/certificate/bf1146f7-c7f3-4515-bfac-a6728b35c0da?lang=en',
     },
     {
       id: 'csharp-logic',
@@ -128,7 +128,7 @@ const Education = () => {
       period: 'Apr 2025',
       descriptionKey: 'cert.csharp.desc',
       skills: ['C#', 'Logic Programming'],
-      credentialUrl: '#',
+      credentialUrl: 'https://www.udemy.com/certificate/UC-fb445ebc-d105-4537-b167-8f8874001466/',
     },
     {
       id: 'git-sharing',
@@ -138,7 +138,7 @@ const Education = () => {
       period: 'Mar 2025',
       descriptionKey: 'cert.git_sharing.desc',
       skills: ['Git', 'GitHub', 'Version Control'],
-      credentialUrl: '#',
+      credentialUrl: 'https://cursos.alura.com.br/certificate/5cab4f38-56ff-4463-9725-b1aaa5701a0d?lang',
     },
     {
       id: 'six-sigma',
@@ -148,7 +148,7 @@ const Education = () => {
       period: 'Apr 2025',
       descriptionKey: 'cert.six_sigma.desc',
       skills: ['Six Sigma', 'White Belt'],
-      credentialUrl: '#',
+      credentialUrl: 'https://rlassociados.paginas.digital/white-belt-ead',
     },
     {
       id: 'learning-to-learn',
@@ -158,7 +158,7 @@ const Education = () => {
       period: 'Dec 2024',
       descriptionKey: 'cert.learning.desc',
       skills: ['Analytical Skills', 'Self Learning'],
-      credentialUrl: '#',
+      credentialUrl: 'https://cursos.alura.com.br/certificate/c53bad3c-2fb0-42c9-9bb9-0d83d552c6b9?lang=en',
     },
     {
       id: 'negotiations',
@@ -168,7 +168,7 @@ const Education = () => {
       period: 'May 2020',
       descriptionKey: 'cert.negotiations.desc',
       skills: ['Communication', 'Negotiation', 'Soft Skills'],
-      credentialUrl: '#',
+      credentialUrl: 'https://www.coursera.org/account/accomplishments/verify/7SVQR7Q5Z4L7',
     },
   ];
 
