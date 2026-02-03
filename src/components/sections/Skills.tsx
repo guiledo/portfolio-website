@@ -17,6 +17,8 @@ import restapi from '@/assets/restapi.png';
 import vite from '@/assets/vite.svg';
 import nextjs from '@/assets/nextjs.svg';
 import shadcn from '@/assets/shadcn-ui-seeklogo.svg';
+import java from '@/assets/java.svg';
+import csharp from '@/assets/csharp.svg';
 
 const Skills = () => {
   const { t } = useLanguage();
@@ -30,6 +32,8 @@ const Skills = () => {
     'Shadcn UI': { type: 'image', src: shadcn },
     'Bun': { type: 'image', src: bun },
     'Node.js': { type: 'image', src: nodejs },
+    'Java': { type: 'image', src: java },
+    'C#': { type: 'image', src: csharp },
     'PostgreSQL': { type: 'image', src: postgresql }, // Changed to image
     'MongoDB': { type: 'image', src: mongodb }, // Changed to image
     'API REST': { type: 'image', src: restapi }, // Added API REST
