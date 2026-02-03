@@ -26,17 +26,17 @@ const Skills = () => {
   const techIcons = {
     'Typescript': { type: 'image', src: typescript },
     'React.js': { type: 'image', src: react },
-    'HTML': { type: 'image', src: html5 }, // Changed to image
-    'CSS': { type: 'image', src: css }, // Changed to image
+    'HTML': { type: 'image', src: html5 },
+    'CSS': { type: 'image', src: css },
     'Tailwind CSS': { type: 'image', src: tailwind },
     'Shadcn UI': { type: 'image', src: shadcn },
     'Bun': { type: 'image', src: bun },
     'Node.js': { type: 'image', src: nodejs },
     'Java': { type: 'image', src: java },
     'C#': { type: 'image', src: csharp },
-    'PostgreSQL': { type: 'image', src: postgresql }, // Changed to image
-    'MongoDB': { type: 'image', src: mongodb }, // Changed to image
-    'API REST': { type: 'image', src: restapi }, // Added API REST
+    'PostgreSQL': { type: 'image', src: postgresql },
+    'MongoDB': { type: 'image', src: mongodb },
+    'API REST': { type: 'image', src: restapi },
     'Git': { type: 'image', src: git },
     'Cursor': { type: 'icon', component: MousePointer },
     'Linux / Bash': { type: 'image', src: linux },
@@ -51,20 +51,20 @@ const Skills = () => {
         <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
           {t('nav.technologies')}
         </h2>
-        <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto"> {/* Adjusted grid for 3 items */}
+        <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
           {skillsData.map((skill) => (
             <div
               key={skill.labelKey}
               className="bg-card border border-border rounded-2xl p-6 hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
             >
-              <div className="flex items-center gap-3 mb-6"> {/* Increased margin-bottom from mb-4 to mb-6 */}
+              <div className="flex items-center gap-3 mb-6">
                 <skill.icon className="h-8 w-8 text-primary" />
-                <h3 className="font-semibold text-xl">{t(skill.labelKey)}</h3> {/* Added text-lg */}
+                <h3 className="font-semibold text-xl">{t(skill.labelKey)}</h3>
               </div>
-              <div className="flex flex-col gap-2 text-lg text-muted-foreground"> {/* Increased gap from gap-1 to gap-2 */}
+              <div className="flex flex-col gap-2 text-lg text-muted-foreground">
                 {skill.tech.map((techItem, techIndex) => {
                   const techInfo = techIcons[techItem.trim()];
-                  const IconComponent = techInfo?.component || Code; // Default to Code icon
+                  const IconComponent = techInfo?.component || Code;
                   const imgSrc = techInfo?.src;
 
                   return (

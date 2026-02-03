@@ -14,7 +14,7 @@ const About = () => {
           <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
             {t('about.description')}
           </p>
-          <div className="max-w-4xl mx-auto space-y-8 mt-12"> {/* Added mt-12 for spacing */}
+          <div className="max-w-4xl mx-auto space-y-8 mt-12">
             {objectivesData.map((objective, index) => (
               <div
                 key={index}

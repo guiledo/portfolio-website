@@ -13,7 +13,7 @@ const Navigation = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      const offset = 120; // Height of the fixed navigation bar + some extra space
+      const offset = 120;
       const bodyRect = document.body.getBoundingClientRect().top;
       const elementRect = element.getBoundingClientRect().top;
       const elementPosition = elementRect - bodyRect;
@@ -49,7 +49,6 @@ const Navigation = () => {
                     <button
                       onClick={() => {
                         scrollToSection('about');
-                        // Close sheet after clicking
                         document.getElementById('sheet-close-button')?.click();
                       }}
                       className="text-xl text-muted-foreground hover:text-foreground transition-colors"
