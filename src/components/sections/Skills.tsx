@@ -19,6 +19,12 @@ import nextjs from '@/assets/nextjs.svg';
 import shadcn from '@/assets/shadcn-ui-seeklogo.svg';
 import java from '@/assets/java.svg';
 import csharp from '@/assets/csharp.svg';
+import mysql from '@/assets/mysql.svg';
+import vercel from '@/assets/vercel.svg';
+import railway from '@/assets/railway.svg';
+import cloudflare from '@/assets/Cloudflare.svg';
+import pnpm from '@/assets/pnpm.svg';
+import npm from '@/assets/npm.svg';
 
 const Skills = () => {
   const { t } = useLanguage();
@@ -34,6 +40,7 @@ const Skills = () => {
     'Node.js': { type: 'image', src: nodejs },
     'Java': { type: 'image', src: java },
     'C#': { type: 'image', src: csharp },
+    'MySQL': { type: 'image', src: mysql },
     'PostgreSQL': { type: 'image', src: postgresql },
     'MongoDB': { type: 'image', src: mongodb },
     'API REST': { type: 'image', src: restapi },
@@ -43,6 +50,10 @@ const Skills = () => {
     'Next.js': { type: 'image', src: nextjs },
     'Vite': { type: 'image', src: vite },
     'NeoVim': { type: 'image', src: neovim },
+    'Vercel': { type: 'image', src: vercel },
+    'Railway': { type: 'image', src: railway },
+    'Cloudflare R2': { type: 'image', src: cloudflare },
+    'pnpm / npm': { type: 'image', src: pnpm },
   };
 
   return (
