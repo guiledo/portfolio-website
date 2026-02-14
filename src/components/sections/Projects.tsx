@@ -12,7 +12,7 @@ const Projects = () => {
         <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
           {t('projects.title')}
         </h2>
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 gap-8 max-w-5xl mx-auto">
           {projects.map((project, index) => (
             <div
               key={index}
