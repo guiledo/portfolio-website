@@ -18,7 +18,7 @@ const Footer = () => {
           <img src={cloudflareLogo} alt="Cloudflare" className="h-4 w-4" /> Cloudflare
         </div>
         <div>
-          Copyright © Guilherme Ledo 2025 All rights Reserved
+          Copyright © Guilherme Ledo 2026 All rights Reserved
         </div>
       </div>
     </footer>
