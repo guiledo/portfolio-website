@@ -1,4 +1,3 @@
-import { LanguageProvider } from '@/contexts/LanguageContext';
 import Navigation from '@/components/sections/Navigation';
 import Hero from '@/components/sections/Hero';
 import About from '@/components/sections/About';
@@ -15,23 +14,21 @@ import { useIsMobile } from '@/hooks/use-mobile';
 const Index = () => {
   const isMobile = useIsMobile();
   return (
-    <LanguageProvider>
-      <div className="min-h-screen">
-        <Navigation />
-        <main className={isMobile ? "pt-[112px]" : ""}>
-          <Hero />
-          <About />
-          <Skills />
+    <div className="min-h-screen">
+      <Navigation />
+      <main className={isMobile ? "pt-[112px]" : ""}>
+        <Hero />
+        <About />
+        <Skills />
 
-          <Experience />
-          <Projects />
-          <Education />
+        <Experience />
+        <Projects />
+        <Education />
 
-          <Contact />
-          <Footer />
-        </main>
-      </div>
-    </LanguageProvider>
+        <Contact />
+        <Footer />
+      </main>
+    </div>
   );
 };
 
