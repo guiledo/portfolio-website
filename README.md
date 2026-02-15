@@ -2,8 +2,12 @@
 
 A multi-language portfolio website showcasing my journey as a **Backend Software Engineer**. This project highlights my ability to build responsive and performant web applications using industry-standard technologies.
 
+[Click here to check my resume!](https://pub-a692cbd978d740f4af91b3dcd6b3d39c.r2.dev/Guilherme-Ledo-Resume.pdf)
+
 ## 🚀 Live Demo
 [Check out my live portfolio here!](https://guilhermeledo.vercel.app)
+
+[portfolio-demo.webm](https://github.com/user-attachments/assets/246aa53a-7671-45bb-9dfe-41c3bc198ede)
 
 ## ✨ Key Features of The Project
 - **🌍 Multi-language Support**: Seamless toggle between **English (US)** and **Portuguese (BR)**.
