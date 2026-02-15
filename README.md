@@ -7,7 +7,7 @@ A multi-language portfolio website showcasing my journey as a **Backend Software
 ## 🚀 Live Demo
 [Check out my live portfolio here!](https://guilhermeledo.vercel.app)
 
-![portfolio-demo](https://github.com/user-attachments/assets/ccbd165b-78a2-4d8c-9862-5bc75a97d178)
+![portfolio-demo](https://github.com/user-attachments/assets/0ee8ef62-3d48-4312-9080-caad53613e98)
 
 ## ✨ Key Features of The Project
 - **🌍 Multi-language Support**: Seamless toggle between **English (US)** and **Portuguese (BR)**.
