@@ -2,6 +2,8 @@ import { useLanguage } from '@/hooks/use-language';
 import { ExternalLink, Github, Trophy } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { projects } from '@/data/projects';
+import ProjectPreview from '../ProjectPreview';
+import { cn } from '@/lib/utils';
 
 const Projects = () => {
   const { t, language } = useLanguage();
@@ -18,6 +20,11 @@ const Projects = () => {
               key={index}
               className="bg-card border border-border rounded-2xl overflow-hidden hover:border-primary transition-all duration-300 group hover:shadow-lg hover:shadow-primary/10 flex flex-col h-full"
             >
+              {project.video && (
+                <div className="w-full p-4 pb-0">
+                  <ProjectPreview src={project.video} />
+                </div>
+              )}
               <div className="p-8 flex flex-col flex-grow h-full">
                 <div className="flex-grow">
                   <div className="flex justify-between items-start mb-4">

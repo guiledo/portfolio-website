@@ -1,3 +1,7 @@
+import calculatorVideo from '@/assets/calculatorjs-demo.webm';
+import portfolioVideo from '@/assets/portfolio-demo.webm';
+import urlShortenerVideo from '@/assets/url-shortener-demo.webm';
+
 export interface Project {
   title: {
     'en-US': string;
@@ -10,6 +14,7 @@ export interface Project {
   tech: string[];
   github: string;
   demo: string;
+  video?: string;
   impact?: {
     'en-US': string;
     'pt-BR': string;
@@ -28,7 +33,8 @@ export const projects: Project[] = [
     },
     tech: ['React', 'TypeScript', 'Node.js', 'Express', 'Prisma', 'PostgreSQL', 'Tailwind CSS', 'Docker', 'Railway', 'Vercel'],
     github: 'https://github.com/guiledo/url-shortener',
-    demo: 'https://url-shortener-guiledo.vercel.app/',
+    demo: 'https://url-shortener-portfolio-proj.vercel.app',
+    video: urlShortenerVideo,
     impact: {
       'en-US': 'Demonstrates fullstack proficiency, focusing on type safety, RESTful API design, and automated database management.',
       'pt-BR': 'Demonstra proficiência fullstack, com foco em segurança de tipos, design de API RESTful e gerenciamento automatizado de banco de dados.',
@@ -46,6 +52,7 @@ export const projects: Project[] = [
     tech: ['HTML5', 'CSS3', 'JavaScript'],
     github: 'https://github.com/guiledo/calculator-vanillajs',
     demo: 'https://guiledo.github.io/calculator-vanillajs/',
+    video: calculatorVideo,
     impact: {
       'en-US': 'Demonstrates understanding of DOM manipulation, event handling and state management without relying on external frameworks.',
       'pt-BR': 'Demonstra compreensão de manipulação do DOM, tratamento de eventos e gerenciamento de estado sem depender de frameworks externos.',
@@ -63,6 +70,7 @@ export const projects: Project[] = [
     tech: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'shadcn/ui', 'Vercel', 'Cloudflare R2'],
     github: 'https://github.com/guiledo/portfolio-website',
     demo: '/',
+    video: portfolioVideo,
     impact: {
       'en-US': 'Demonstrates proficiency in modern frontend architecture and cloud infrastructure integration for asset management.',
       'pt-BR': 'Demonstra proficiência em arquitetura frontend moderna e integração de infraestrutura em nuvem para gerenciamento de ativos.',
