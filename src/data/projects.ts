@@ -19,19 +19,19 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: {
-      'en-US': 'Portfolio',
-      'pt-BR': 'Portfólio',
+      'en-US': 'URL Shortener',
+      'pt-BR': 'Encurtador de URL',
     },
     description: {
-      'en-US': 'A responsive portfolio built with React and TypeScript. Features a polished UI using shadcn/ui. Deployed on Vercel with resume storage powered by Cloudflare R2.',
-      'pt-BR': 'Um portfólio responsivo construído com React e TypeScript. Possui uma interface polida usando shadcn/ui. Hospedado na Vercel com armazenamento de currículo via Cloudflare R2.',
+      'en-US': 'A modern, high-performance URL shortener built with TypeScript, React, and Node.js. Developed to showcase fullstack engineering skills, including API design, database modeling, and cloud deployment.',
+      'pt-BR': 'Um encurtador de URL moderno e de alta performance construído com TypeScript, React e Node.js. Desenvolvido para demonstrar habilidades de engenharia fullstack, incluindo design de API, modelagem de banco de dados e implantação em nuvem.',
     },
-    tech: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'shadcn/ui', 'Vercel', 'Cloudflare R2'],
-    github: 'https://github.com/guiledo/portfolio-website',
-    demo: '/',
+    tech: ['React', 'TypeScript', 'Node.js', 'Express', 'Prisma', 'PostgreSQL', 'Tailwind CSS', 'Docker', 'Railway', 'Vercel'],
+    github: 'https://github.com/guiledo/url-shortener',
+    demo: 'https://url-shortener-guiledo.vercel.app/',
     impact: {
-      'en-US': 'Demonstrates proficiency in modern frontend architecture and cloud infrastructure integration for asset management.',
-      'pt-BR': 'Demonstra proficiência em arquitetura frontend moderna e integração de infraestrutura em nuvem para gerenciamento de ativos.',
+      'en-US': 'Demonstrates fullstack proficiency, focusing on type safety, RESTful API design, and automated database management.',
+      'pt-BR': 'Demonstra proficiência fullstack, com foco em segurança de tipos, design de API RESTful e gerenciamento automatizado de banco de dados.',
     },
   },
   {
@@ -49,6 +49,23 @@ export const projects: Project[] = [
     impact: {
       'en-US': 'Demonstrates understanding of DOM manipulation, event handling and state management without relying on external frameworks.',
       'pt-BR': 'Demonstra compreensão de manipulação do DOM, tratamento de eventos e gerenciamento de estado sem depender de frameworks externos.',
+    },
+  },
+  {
+    title: {
+      'en-US': 'Portfolio',
+      'pt-BR': 'Portfólio',
+    },
+    description: {
+      'en-US': 'A responsive portfolio built with React and TypeScript. Features a polished UI using shadcn/ui. Deployed on Vercel with resume storage powered by Cloudflare R2.',
+      'pt-BR': 'Um portfólio responsivo construído com React e TypeScript. Possui uma interface polida usando shadcn/ui. Hospedado na Vercel com armazenamento de currículo via Cloudflare R2.',
+    },
+    tech: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'shadcn/ui', 'Vercel', 'Cloudflare R2'],
+    github: 'https://github.com/guiledo/portfolio-website',
+    demo: '/',
+    impact: {
+      'en-US': 'Demonstrates proficiency in modern frontend architecture and cloud infrastructure integration for asset management.',
+      'pt-BR': 'Demonstra proficiência em arquitetura frontend moderna e integração de infraestrutura em nuvem para gerenciamento de ativos.',
     },
   },
   {
