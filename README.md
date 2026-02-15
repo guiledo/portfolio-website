@@ -1,6 +1,6 @@
 # Software Engineering Portfolio
 
-A professional, multi-language portfolio website showcasing my journey as a **Backend Software Engineer**. This project highlights my ability to build polished, responsive and performant web applications using industry-standard technologies.
+A multi-language portfolio website showcasing my journey as a **Backend Software Engineer**. This project highlights my ability to build responsive and performant web applications using industry-standard technologies.
 
 ## 🚀 Live Demo
 [Check out my live portfolio here!](https://guilhermeledo.vercel.app)
