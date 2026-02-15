@@ -9,6 +9,8 @@ A multi-language portfolio website showcasing my journey as a **Backend Software
 
 [portfolio-demo.webm](https://github.com/user-attachments/assets/246aa53a-7671-45bb-9dfe-41c3bc198ede)
 
+![portfolio-demo](https://github.com/user-attachments/assets/8640a2ad-e9d7-4463-9506-0fdaeb85e452)
+
 ## ✨ Key Features of The Project
 - **🌍 Multi-language Support**: Seamless toggle between **English (US)** and **Portuguese (BR)**.
 - **⚡ Performance First**: Built with **Vite** for near-instant load times.
