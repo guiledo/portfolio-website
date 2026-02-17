@@ -4,7 +4,11 @@ import officeMe from '@/assets/office-me.png';
 import { useLanguage } from '@/hooks/use-language';
 
 const Hero = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+
+  const resumeUrl = language === 'pt-BR' 
+    ? "https://pub-a692cbd978d740f4af91b3dcd6b3d39c.r2.dev/Guilherme-Ledo-Resume_PTBR.pdf"
+    : "https://pub-a692cbd978d740f4af91b3dcd6b3d39c.r2.dev/Guilherme-Ledo-Resume_EN.pdf";
 
   return (
     <section id="hero" className="flex items-center relative min-h-[calc(100vh-6rem)] md:h-screen">
@@ -20,7 +24,7 @@ const Hero = () => {
           </h2>
           <div className="hidden md:flex justify-start">
             <Button asChild variant="secondary" size="lg" className="w-40 rounded-full border border-primary animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400 hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
-              <a href="https://pub-a692cbd978d740f4af91b3dcd6b3d39c.r2.dev/Guilherme-Ledo-Resume.pdf" target="_blank" rel="noopener noreferrer">
+              <a href={resumeUrl} target="_blank" rel="noopener noreferrer">
                 {t('hero.resume')}
                 <ExternalLink className="h-4 w-4 ml-2" />
               </a>
@@ -36,7 +40,7 @@ const Hero = () => {
         </div>
         <div className="flex md:hidden justify-center mt-8 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400">
           <Button asChild variant="secondary" size="lg" className="w-40 rounded-full border border-primary hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
-            <a href="https://pub-a692cbd978d740f4af91b3dcd6b3d39c.r2.dev/Guilherme-Ledo-Resume.pdf" target="_blank" rel="noopener noreferrer">
+            <a href={resumeUrl} target="_blank" rel="noopener noreferrer">
               {t('hero.resume')}
               <ExternalLink className="h-4 w-4 ml-2" />
             </a>

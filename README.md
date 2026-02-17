@@ -2,7 +2,7 @@
 
 A multi-language portfolio website showcasing my journey as a **Backend Software Engineer**. This project highlights my ability to build responsive and performant web applications using industry-standard technologies.
 
-[Click here to check my resume!](https://pub-a692cbd978d740f4af91b3dcd6b3d39c.r2.dev/Guilherme-Ledo-Resume.pdf)
+[Click here to check my resume! (English)](https://pub-a692cbd978d740f4af91b3dcd6b3d39c.r2.dev/Guilherme-Ledo-Resume_EN.pdf)
 
 ## 🚀 Live Demo
 [Check out my live portfolio here!](https://guilhermeledo.vercel.app)
