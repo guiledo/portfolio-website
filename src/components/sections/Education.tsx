@@ -38,7 +38,7 @@ const Education = () => {
       issuerKey: 'education.cs.issuer',
       period: 'Jan 2025 - Present',
       descriptionKey: 'education.cs.description',
-      skills: ['Computer Science', 'Software Development', 'System Development'],
+      skills: ['skill.cs', 'skill.software_dev', 'skill.system_dev'],
     },
     {
       id: 'react-node-api',
@@ -47,7 +47,7 @@ const Education = () => {
       issuerKey: 'Alura',
       period: 'Nov 2025',
       descriptionKey: 'cert.react_node.desc',
-      skills: ['React.js', 'Node.js', 'API Development'],
+      skills: ['React.js', 'Node.js', 'skill.api_dev'],
       credentialUrl: 'https://cursos.alura.com.br/certificate/843c1cd7-1a64-4821-b5ba-38ca5de25556?lang=en',
     },
     {
@@ -67,7 +67,7 @@ const Education = () => {
       issuerKey: 'Alura',
       period: 'Dez 2025',
       descriptionKey: 'cert.postgresql.desc',
-      skills: ['PostgreSQL', 'Relational Databases'],
+      skills: ['PostgreSQL', 'skill.relational_db'],
       credentialUrl: 'https://cursos.alura.com.br/certificate/35fa1772-8183-4c12-ba1f-e97e60a74c65?lang=en',
     },
     {
@@ -137,7 +137,7 @@ const Education = () => {
       issuerKey: 'Udemy',
       period: 'Apr 2025',
       descriptionKey: 'cert.csharp.desc',
-      skills: ['C#', 'Logic Programming'],
+      skills: ['C#', 'skill.logic_prog'],
       credentialUrl: 'https://www.udemy.com/certificate/UC-fb445ebc-d105-4537-b167-8f8874001466/',
     },
     {
@@ -147,7 +147,7 @@ const Education = () => {
       issuerKey: 'Alura',
       period: 'Mar 2025',
       descriptionKey: 'cert.git_sharing.desc',
-      skills: ['Git', 'GitHub', 'Version Control'],
+      skills: ['Git', 'GitHub', 'skill.version_control'],
       credentialUrl: 'https://cursos.alura.com.br/certificate/5cab4f38-56ff-4463-9725-b1aaa5701a0d?lang',
     },
     {
@@ -157,7 +157,7 @@ const Education = () => {
       issuerKey: 'RL&Associados',
       period: 'Apr 2025',
       descriptionKey: 'cert.six_sigma.desc',
-      skills: ['Six Sigma', 'White Belt'],
+      skills: ['Six Sigma', 'skill.white_belt'],
       credentialUrl: 'https://rlassociados.paginas.digital/white-belt-ead',
     },
     {
@@ -167,7 +167,7 @@ const Education = () => {
       issuerKey: 'Alura',
       period: 'Dec 2024',
       descriptionKey: 'cert.learning.desc',
-      skills: ['Analytical Skills', 'Self Learning'],
+      skills: ['skill.analytical', 'skill.self_learning'],
       credentialUrl: 'https://cursos.alura.com.br/certificate/c53bad3c-2fb0-42c9-9bb9-0d83d552c6b9?lang=en',
     },
     {
@@ -177,7 +177,7 @@ const Education = () => {
       issuerKey: 'University of Michigan',
       period: 'May 2020',
       descriptionKey: 'cert.negotiations.desc',
-      skills: ['Communication', 'Negotiation', 'Soft Skills'],
+      skills: ['skill.communication', 'skill.negotiation', 'skill.soft_skills'],
       credentialUrl: 'https://www.coursera.org/account/accomplishments/verify/7SVQR7Q5Z4L7',
     },
   ];
@@ -224,7 +224,7 @@ const Education = () => {
                         key={skill}
                         className="text-xs font-medium px-2.5 py-1 bg-primary/10 text-primary rounded-md border border-primary/20"
                       >
-                        {skill}
+                        {skill.startsWith('skill.') ? t(skill) : skill}
                       </span>
                     ))}
                   </div>

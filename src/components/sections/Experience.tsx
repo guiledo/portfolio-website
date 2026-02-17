@@ -34,7 +34,7 @@ const Experience = () => {
                         key={skill}
                         className="text-sm px-3 py-1 bg-primary/10 text-primary rounded-full"
                       >
-                        {skill}
+                        {skill.startsWith('skill.') ? t(skill) : skill}
                       </span>
                     ))}
                   </div>
