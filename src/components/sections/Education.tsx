@@ -121,6 +121,16 @@ const Education = () => {
       credentialUrl: 'https://cursos.alura.com.br/degree/certificate/bf1146f7-c7f3-4515-bfac-a6728b35c0da?lang=en',
     },
     {
+      id: 'java-oop',
+      type: 'tech-certification',
+      titleKey: 'cert.java_oop.title',
+      issuerKey: 'Udemy',
+      period: 'Jan 2026',
+      descriptionKey: 'cert.java_oop.desc',
+      skills: ['Java', 'OOP', 'Spring Boot', 'Hibernate', 'MySQL', 'MongoDB'],
+      credentialUrl: 'https://www.udemy.com/certificate/UC-cf78e136-b928-4094-9a3d-eddf900f77e0/',
+    },
+    {
       id: 'csharp-logic',
       type: 'tech-certification',
       titleKey: 'cert.csharp.title',
