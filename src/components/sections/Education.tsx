@@ -151,6 +151,15 @@ const Education = () => {
       credentialUrl: 'https://cursos.alura.com.br/certificate/5cab4f38-56ff-4463-9725-b1aaa5701a0d?lang',
     },
     {
+      id: 'law-bachelor',
+      type: 'education',
+      titleKey: 'education.law.title',
+      issuerKey: 'education.law.issuer',
+      period: 'Jan 2017 - Dec 2021',
+      descriptionKey: 'education.law.description',
+      skills: ['skill.analytical', 'skill.logical_reasoning', 'skill.communication', 'skill.negotiation', 'skill.soft_skills'],
+    },
+    {
       id: 'six-sigma',
       type: 'certification',
       titleKey: 'cert.six_sigma.title',
