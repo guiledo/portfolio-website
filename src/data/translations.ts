@@ -11,7 +11,13 @@ export const translations = {
     'hero.title': 'Software Engineer',
     'hero.resume': 'Resume',
     'about.title': 'About Me',
-    'about.description': 'Computer Science student specializing in backend. While capable of delivering full-stack applications, my core strength lies in architecting backend systems using Node.js, Bun and PostgreSQL. I am focused on mastering API design, database optimization and clean code principles.',
+    'about.description': `Computer Science student and Full-stack Developer with a strong focus on back-end systems.
+
+My journey into tech is built on a unique foundation. I transitioned from Corporate Law into IT, bringing valuable experience in advising international clients and collaborating with cross-border teams. This legal background equipped me with deep analytical rigor, advanced negotiation skills, and the ability to structure complex logic.
+
+My subsequent experience in Tech Support sharpened my ability to troubleshoot under pressure, communicate technical concepts effectively, and manage client expectations.
+
+Today, I am dedicated to honing my software engineering skills through academic study and hands-on project development. I combine my international professional maturity with deep technical dedication to build applications.`,
     'about.frontend.label': 'Frontend',
     'backend.label': 'Backend & Infrastructure',
     'skills.tools.label': 'Tools & Environment',
@@ -108,7 +114,13 @@ export const translations = {
     'hero.title': 'Desenvolvedor de Software',
     'hero.resume': 'Currículo',
     'about.title': 'Sobre Mim',
-    'about.description': 'Estudante de Ciência da Computação especializando-me em backend. Embora capaz de entregar aplicações full-stack, meu ponto forte está na arquitetura de sistemas backend utilizando Node.js, Bun e PostgreSQL. Estou focado em dominar design de APIs, otimização de banco de dados e princípios de clean code.',
+    'about.description': `Estudante de Ciência da Computação e Desenvolvedor Full-stack com forte foco em sistemas back-end.
+
+Minha jornada na tecnologia é construída sobre uma base única. Fiz a transição do Direito Societário para a TI, trazendo uma valiosa experiência em assessoria a clientes internacionais e colaboração com equipes de diferentes países. Essa bagagem jurídica me proporcionou um profundo rigor analítico, habilidades avançadas de negociação e a capacidade de estruturar lógicas complexas.
+
+Minha experiência subsequente em Suporte Técnico aprimorou minha capacidade de solucionar problemas sob pressão, comunicar conceitos técnicos de forma eficaz e alinhar as expectativas dos clientes.
+
+Hoje, dedico-me a aprimorar minhas habilidades em engenharia de software por meio do estudo acadêmico e do desenvolvimento prático de projetos. Combino minha maturidade profissional internacional com profunda dedicação técnica para construir aplicações.`,
     'about.frontend.label': 'Frontend',
     'backend.label': 'Backend e Infraestrutura',
     'skills.tools.label': 'Ferramentas e Ambiente',

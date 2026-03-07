@@ -11,7 +11,7 @@ const About = () => {
           {t('about.title')}
         </h2>
         <div className="max-w-3xl mx-auto">
-          <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
+          <p className="text-xl text-muted-foreground mb-12 leading-relaxed whitespace-pre-line">
             {t('about.description')}
           </p>
           <div className="max-w-4xl mx-auto space-y-8 mt-12">
