@@ -2,8 +2,22 @@ import { useLanguage } from '@/hooks/use-language';
 import { Briefcase } from 'lucide-react';
 import { experiencesData } from '@/data/experience';
 
+const translatePeriod = (period: string, language: string) => {
+  if (language !== 'pt-BR') return period;
+
+  return period
+    .replace('Present', 'Atualmente')
+    .replace('Feb', 'Fev')
+    .replace('Apr', 'Abr')
+    .replace('May', 'Mai')
+    .replace('Aug', 'Ago')
+    .replace('Sep', 'Set')
+    .replace('Oct', 'Out')
+    .replace('Dec', 'Dez');
+};
+
 const Experience = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <section id="experience" className="flex items-center py-20 relative mb-20">
@@ -26,7 +40,7 @@ const Experience = () => {
                 <div className="flex-1">
                   <h3 className="text-2xl font-semibold mb-1">{t(exp.titleKey)}</h3>
                   <p className="text-lg text-primary mb-2">{t(exp.companyKey)}</p>
-                  <p className="text-base text-muted-foreground mb-3">{exp.period}</p>
+                  <p className="text-base text-muted-foreground mb-3">{translatePeriod(exp.period, language)}</p>
                   <p className="text-lg text-muted-foreground mb-4">{t(exp.descriptionKey)}</p>
                   <div className="flex flex-wrap gap-2">
                     {exp.skills.map((skill) => (
