@@ -31,7 +31,7 @@ export const projects: Project[] = [
       'en-US': 'A modern, high-performance URL shortener built with TypeScript, React, and Node.js. Developed to showcase fullstack engineering skills, including API design, database modeling, and cloud deployment.',
       'pt-BR': 'Um encurtador de URL moderno e de alta performance construído com TypeScript, React e Node.js. Desenvolvido para demonstrar habilidades de engenharia fullstack, incluindo design de API, modelagem de banco de dados e implantação em nuvem.',
     },
-    tech: ['React', 'TypeScript', 'Node.js', 'Express', 'Prisma', 'PostgreSQL', 'Tailwind CSS', 'Docker', 'Railway', 'Vercel'],
+    tech: ['React', 'TypeScript', 'Node.js', 'Express', 'Prisma', 'PostgreSQL', 'Tailwind CSS', 'Supabase', 'Render', 'Vercel'],
     github: 'https://github.com/guiledo/url-shortener',
     demo: 'https://url-shortener-portfolio-proj.vercel.app',
     video: urlShortenerVideo,

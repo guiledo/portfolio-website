@@ -22,6 +22,8 @@ import csharp from '@/assets/csharp.svg';
 import mysql from '@/assets/mysql.svg';
 import vercel from '@/assets/vercel.svg';
 import railway from '@/assets/railway.svg';
+import supabase from '@/assets/supabase.svg';
+import render from '@/assets/render.svg';
 import cloudflare from '@/assets/Cloudflare.svg';
 import pnpm from '@/assets/pnpm.svg';
 import npm from '@/assets/npm.svg';
@@ -52,6 +54,8 @@ const Skills = () => {
     'NeoVim': { type: 'image', src: neovim },
     'Vercel': { type: 'image', src: vercel },
     'Railway': { type: 'image', src: railway },
+    'Supabase': { type: 'image', src: supabase },
+    'Render': { type: 'image', src: render },
     'Cloudflare R2': { type: 'image', src: cloudflare },
     'pnpm / npm': { type: 'image', src: pnpm },
   };
