@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import { useLanguage } from '@/hooks/use-language';
-import { GraduationCap, Award, Monitor, ExternalLink } from 'lucide-react';
+import { GraduationCap, Award, Monitor, ExternalLink, ChevronDown, ChevronUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 interface EducationItem {
   id: string;
@@ -29,6 +31,7 @@ const translatePeriod = (period: string, language: string) => {
 
 const Education = () => {
   const { t, language } = useLanguage();
+  const [showAllTech, setShowAllTech] = useState(false);
 
   const educationData: EducationItem[] = [
     {
@@ -191,68 +194,142 @@ const Education = () => {
     },
   ];
 
+  const academicData = educationData.filter(item => item.type === 'education');
+  const techCertData = educationData.filter(item => item.type === 'tech-certification');
+  const professionalCertData = educationData.filter(item => item.type === 'certification');
+
+  const visibleTechCerts = showAllTech ? techCertData : techCertData.slice(0, 6);
+
+  const EducationCard = ({ item }: { item: EducationItem }) => (
+    <div
+      key={item.id}
+      className="bg-card border border-border rounded-2xl p-6 hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 flex flex-col h-full"
+    >
+      <div className="flex gap-4 flex-grow">
+        <div className="flex-shrink-0">
+          <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
+            {item.type === 'education' ? (
+              <GraduationCap className="h-6 w-6 text-primary" />
+            ) : item.type === 'tech-certification' ? (
+              <Monitor className="h-6 w-6 text-primary" />
+            ) : (
+              <Award className="h-6 w-6 text-primary" />
+            )}
+          </div>
+        </div>
+        <div className="flex-1">
+          <h3 className="text-2xl font-semibold mb-1">{t(item.titleKey)}</h3>
+          <p className="text-lg text-primary mb-2 font-medium">
+            {item.issuerKey.includes('.') ? t(item.issuerKey) : item.issuerKey}
+          </p>
+          <p className="text-base text-muted-foreground mb-3">{translatePeriod(item.period, language)}</p>
+          <p className="text-lg text-muted-foreground mb-4">{t(item.descriptionKey)}</p>
+        </div>
+      </div>
+      
+      <div className="mt-auto pt-4 border-t border-border/50">
+        {item.skills && (
+          <div className="flex flex-wrap gap-2 mb-6">
+            {item.skills.map((skill) => (
+              <span
+                key={skill}
+                className="text-sm px-3 py-1 bg-primary/10 text-primary rounded-full"
+              >
+                {skill.startsWith('skill.') ? t(skill) : skill}
+              </span>
+            ))}
+          </div>
+        )}
+        
+        {item.credentialUrl && (
+          <div className="flex gap-3">
+            <Button variant="outline" size="sm" className="gap-2 w-full md:w-auto" asChild>
+              <a href={item.credentialUrl} target="_blank" rel="noopener noreferrer">
+                <ExternalLink className="h-4 w-4" />
+                {t('education.credential')}
+              </a>
+            </Button>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+
   return (
     <section id="education" className="flex items-center py-20 relative mb-20">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
           {t('education.title')}
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-          {educationData.map((item) => (
-            <div
-              key={item.id}
-              className="bg-card border border-border rounded-2xl p-6 hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 flex flex-col h-full"
+
+        <Tabs defaultValue="academic" className="max-w-7xl mx-auto">
+          <TabsList className="grid w-full grid-cols-3 mb-12 max-w-2xl mx-auto h-auto p-1.5 bg-muted/80 border border-border/50 backdrop-blur-sm shadow-inner">
+            <TabsTrigger 
+              value="academic" 
+              className="py-3 text-sm md:text-base transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg hover:bg-primary/10 hover:text-primary data-[state=active]:hover:text-primary-foreground"
             >
-              <div className="flex gap-4 flex-grow">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
-                    {item.type === 'education' ? (
-                      <GraduationCap className="h-6 w-6 text-primary" />
-                    ) : item.type === 'tech-certification' ? (
-                      <Monitor className="h-6 w-6 text-primary" />
-                    ) : (
-                      <Award className="h-6 w-6 text-primary" />
-                    )}
-                  </div>
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-semibold mb-1">{t(item.titleKey)}</h3>
-                  <p className="text-lg text-primary mb-2">
-                    {item.issuerKey.includes('.') ? t(item.issuerKey) : item.issuerKey}
-                  </p>
-                  <p className="text-base text-muted-foreground mb-3">{translatePeriod(item.period, language)}</p>
-                  <p className="text-lg text-muted-foreground mb-4">{t(item.descriptionKey)}</p>
-                </div>
-              </div>
-              
-              <div className="mt-auto pt-4 border-t border-border/50">
-                {item.skills && (
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {item.skills.map((skill) => (
-                      <span
-                        key={skill}
-                        className="text-xs font-medium px-2.5 py-1 bg-primary/10 text-primary rounded-md border border-primary/20"
-                      >
-                        {skill.startsWith('skill.') ? t(skill) : skill}
-                      </span>
-                    ))}
-                  </div>
-                )}
-                
-                {item.credentialUrl && (
-                  <div className="flex gap-3">
-                    <Button variant="outline" size="sm" className="gap-2 w-full md:w-auto" asChild>
-                      <a href={item.credentialUrl} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="h-4 w-4" />
-                        {t('education.credential')}
-                      </a>
-                    </Button>
-                  </div>
-                )}
-              </div>
+              {t('education.tabs.academic')}
+            </TabsTrigger>
+            <TabsTrigger 
+              value="technical" 
+              className="py-3 text-sm md:text-base transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg hover:bg-primary/10 hover:text-primary data-[state=active]:hover:text-primary-foreground"
+            >
+              {t('education.tabs.technical')}
+            </TabsTrigger>
+            <TabsTrigger 
+              value="professional" 
+              className="py-3 text-sm md:text-base transition-all duration-300 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg hover:bg-primary/10 hover:text-primary data-[state=active]:hover:text-primary-foreground"
+            >
+              {t('education.tabs.certifications')}
+            </TabsTrigger>
+          </TabsList>
+
+          <TabsContent value="academic" className="mt-0 focus-visible:outline-none">
+            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              {academicData.map((item) => (
+                <EducationCard key={item.id} item={item} />
+              ))}
             </div>
-          ))}
-        </div>
+          </TabsContent>
+
+          <TabsContent value="technical" className="mt-0 focus-visible:outline-none">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {visibleTechCerts.map((item) => (
+                <EducationCard key={item.id} item={item} />
+              ))}
+            </div>
+            
+            {techCertData.length > 6 && (
+              <div className="mt-10 flex justify-center">
+                <Button 
+                  variant="ghost" 
+                  onClick={() => setShowAllTech(!showAllTech)}
+                  className="gap-2 text-primary hover:text-primary hover:bg-primary/10"
+                >
+                  {showAllTech ? (
+                    <>
+                      <ChevronUp className="h-4 w-4" />
+                      {t('education.showLess')}
+                    </>
+                  ) : (
+                    <>
+                      <ChevronDown className="h-4 w-4" />
+                      {t('education.showMore')}
+                    </>
+                  )}
+                </Button>
+              </div>
+            )}
+          </TabsContent>
+
+          <TabsContent value="professional" className="mt-0 focus-visible:outline-none">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {professionalCertData.map((item) => (
+                <EducationCard key={item.id} item={item} />
+              ))}
+            </div>
+          </TabsContent>
+        </Tabs>
       </div>
     </section>
   );

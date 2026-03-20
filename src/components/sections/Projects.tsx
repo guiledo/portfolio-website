@@ -22,7 +22,15 @@ const Projects = () => {
             >
               {project.video && (
                 <div className="w-full p-4 pb-0">
-                  <ProjectPreview src={project.video} />
+                  <ProjectPreview 
+                    src={project.video} 
+                    videoStyle={
+                      project.title['en-US'] === 'Portfolio' ? { 
+                        transform: 'scale(1.05)', 
+                        objectPosition: 'top' 
+                      } : undefined
+                    }
+                  />
                 </div>
               )}
               <div className="p-8 flex flex-col flex-grow h-full">

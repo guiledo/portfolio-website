@@ -4,14 +4,16 @@ import { cn } from "@/lib/utils";
 interface ProjectPreviewProps {
   src?: string;
   className?: string;
+  videoStyle?: React.CSSProperties;
+  ratio?: number;
 }
 
-const ProjectPreview = ({ src, className }: ProjectPreviewProps) => {
+const ProjectPreview = ({ src, className, videoStyle, ratio = 16 / 9 }: ProjectPreviewProps) => {
   if (!src) return null;
 
   return (
     <div className={cn("relative w-full overflow-hidden rounded-xl", className)}>
-      <AspectRatio ratio={16 / 9}>
+      <AspectRatio ratio={ratio}>
         <video
           src={src}
           muted
@@ -20,6 +22,7 @@ const ProjectPreview = ({ src, className }: ProjectPreviewProps) => {
           playsInline
           disablePictureInPicture
           controlsList="nodownload noplaybackrate noremoteplayback"
+          style={videoStyle}
           className="h-full w-full object-cover"
         />
       </AspectRatio>
