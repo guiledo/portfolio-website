@@ -36,8 +36,8 @@ export const projects: Project[] = [
     demo: 'https://url-shortener-portfolio-proj.vercel.app',
     video: urlShortenerVideo,
     impact: {
-      'en-US': 'Demonstrates fullstack proficiency, focusing on type safety, RESTful API design, and automated database management.',
-      'pt-BR': 'Demonstra proficiência fullstack, com foco em segurança de tipos, design de API RESTful e gerenciamento automatizado de banco de dados.',
+      'en-US': 'Demonstrates fullstack proficiency, focusing on type safety, RESTful API design, and infrastructure optimization through a strategic cron-job to mitigate Render\'s "cold starts".',
+      'pt-BR': 'Demonstra proficiência fullstack, com foco em segurança de tipos, design de API RESTful e otimização de infraestrutura via cron-job para mitigar o "cold start" do Render.',
     },
   },
   {
