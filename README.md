@@ -42,7 +42,7 @@ src/
 ```
 
 ## 💼 About Me
-I am a **Computer Science student at University São Judas Tadeu (USJT)** specializing in backend architecture.
+I am a **Computer Science student at São Judas Tadeu University (USJT)** specializing in backend architecture.
 - **📍 Location**: São Paulo, Brazil (Available for Remote/Hybrid/Relocation).
 - **🗣️ Languages**: Fluent in English and Native in Portuguese.
 

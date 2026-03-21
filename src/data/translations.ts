@@ -52,7 +52,7 @@ Today, I am dedicated to honing my software engineering skills through academic 
     'experience.manassero.company': 'Manassero Advogados',
     'experience.manassero.description': 'Practice in M&A and corporate law involving national and international clients and teams. Operations, generally, involving funds with the intention of making investments in venture capital and private equity modalities.',
     'education.cs.title': 'Bachelor of Computer Science',
-    'education.cs.issuer': 'University São Judas Tadeu (USJT)',
+    'education.cs.issuer': 'São Judas Tadeu University (USJT)',
     'education.cs.description': 'Currently pursuing Computer Science degree with focus on software engineering, algorithms, data structures, and web development. GPA: 3.58/4.0',
     'education.law.title': 'Bachelor of Laws',
     'education.law.issuer': 'Pontifical Catholic University of São Paulo (PUCSP)',
