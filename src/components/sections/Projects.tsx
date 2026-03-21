@@ -31,6 +31,8 @@ const Projects = () => {
                         objectPosition: 'top' 
                       } : project.title['en-US'] === 'URL Shortener' ? {
                         objectPosition: 'top',
+                        transform: 'scale(1.08)',
+                        transformOrigin: 'top',
                       } : undefined
                     }
                   />
