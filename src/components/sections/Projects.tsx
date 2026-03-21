@@ -3,7 +3,6 @@ import { ExternalLink, Github, Trophy } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { projects } from '@/data/projects';
 import ProjectPreview from '../ProjectPreview';
-import { cn } from '@/lib/utils';
 
 const Projects = () => {
   const { t, language } = useLanguage();
@@ -24,15 +23,13 @@ const Projects = () => {
                 <div className="w-full p-4 pb-0">
                   <ProjectPreview 
                     src={project.video} 
-                    ratio={project.title['en-US'] === 'URL Shortener' ? 2.0 : 16 / 9}
+                    ratio={project.title['en-US'] === 'URL Shortener' ? 3.5 : 16 / 9}
                     videoStyle={
                       project.title['en-US'] === 'Portfolio' ? { 
                         transform: 'scale(1.1)', 
                         transformOrigin: 'top',
                         objectPosition: 'top' 
                       } : project.title['en-US'] === 'URL Shortener' ? {
-                        transform: 'scale(1.2)', 
-                        transformOrigin: 'top',
                         objectPosition: 'top',
                       } : undefined
                     }
