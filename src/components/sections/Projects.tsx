@@ -3,7 +3,6 @@ import { ExternalLink, Github, Trophy } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { projects } from '@/data/projects';
 import ProjectPreview from '../ProjectPreview';
-import { cn } from '@/lib/utils';
 
 const Projects = () => {
   const { t, language } = useLanguage();
@@ -26,7 +25,8 @@ const Projects = () => {
                     src={project.video} 
                     videoStyle={
                       project.title['en-US'] === 'Portfolio' ? { 
-                        transform: 'scale(1.05)', 
+                        transform: 'scale(1.1)', 
+                        transformOrigin: 'top',
                         objectPosition: 'top' 
                       } : undefined
                     }
