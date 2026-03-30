@@ -29,7 +29,7 @@ const Hero = () => {
                 <ExternalLink className="h-4 w-4 ml-2" />
               </a>
             </Button>
-            <Button asChild variant="outline" size="lg" className="rounded-full border border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500">
+            <Button asChild variant="outline" size="lg" className="rounded-full border border-primary bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500 hover:shadow-lg hover:shadow-primary/10">
               <a href="#projects">
                 {language === 'pt-BR' ? 'Ver Projetos' : 'View Projects'}
               </a>
@@ -54,7 +54,7 @@ const Hero = () => {
               <ExternalLink className="h-4 w-4 ml-2" />
             </a>
           </Button>
-          <Button asChild variant="outline" size="lg" className="w-40 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm mx-auto">
+          <Button asChild variant="outline" size="lg" className="w-40 rounded-full border border-primary bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 mx-auto">
             <a href="#projects">
               {language === 'pt-BR' ? 'Ver Projetos' : 'View Projects'}
             </a>
