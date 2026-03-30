@@ -29,7 +29,7 @@ const Hero = () => {
                 <ExternalLink className="h-4 w-4 ml-2" />
               </a>
             </Button>
-            <Button asChild variant="secondary" size="lg" className="w-40 rounded-full border border-primary animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500 hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+            <Button asChild variant="secondary" size="lg" className="w-40 rounded-full border border-primary animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500 hover:border-primary hover:shadow-lg hover:shadow-primary/10">
               <a href="#projects">
                 {language === 'pt-BR' ? 'Ver Projetos' : 'View Projects'}
               </a>
@@ -48,13 +48,13 @@ const Hero = () => {
           />
         </div>
         <div className="flex md:hidden flex-col gap-4 justify-center mt-8 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400">
-          <Button asChild variant="secondary" size="lg" className="w-40 rounded-full border border-primary hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 mx-auto">
+          <Button asChild variant="secondary" size="lg" className="w-40 rounded-full border border-primary hover:border-primary hover:shadow-lg hover:shadow-primary/10 mx-auto">
             <a href={resumeUrl} target="_blank" rel="noopener noreferrer">
               {t('hero.resume')}
               <ExternalLink className="h-4 w-4 ml-2" />
             </a>
           </Button>
-          <Button asChild variant="secondary" size="lg" className="w-40 rounded-full border border-primary hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 mx-auto">
+          <Button asChild variant="secondary" size="lg" className="w-40 rounded-full border border-primary hover:border-primary hover:shadow-lg hover:shadow-primary/10 mx-auto">
             <a href="#projects">
               {language === 'pt-BR' ? 'Ver Projetos' : 'View Projects'}
             </a>
