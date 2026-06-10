@@ -21,9 +21,9 @@ const Projects = () => {
             >
               {project.video && (
                 <div className="w-full p-4 pb-0">
-                  <ProjectPreview 
-                    src={project.video} 
-                    ratio={project.title['en-US'] === 'URL Shortener' ? 3.5 : 16 / 9}
+                  <ProjectPreview
+                    src={project.video}
+                    ratio={16 / 9}
                     videoStyle={
                       project.title['en-US'] === 'Portfolio' ? { 
                         transform: 'scale(1.1)', 
