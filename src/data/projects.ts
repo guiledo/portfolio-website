@@ -1,6 +1,6 @@
 import calculatorVideo from '@/assets/calculatorjs-demo.webm';
 import portfolioVideo from '@/assets/portfolio-demo.webm';
-import urlShortenerVideo from '@/assets/url-shortener-demo.webm';
+import urlShortenerVideo from '@/assets/url-shortener-demo.mp4';
 
 export interface Project {
   title: {
